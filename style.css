@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.conteudo {
+    width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grupo {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c8e6c9;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2e7d32;
+    outline: none;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.4);
+}
+
+.checkbox {
+    width: auto;
+}
+
+button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#btnCadastrar {
+    background-color: #2e7d32;
+}
+
+#btnCadastrar:hover {
+    background-color: #1b5e20;
+}
+#btnLimpar {
+    background-color: #c62828;
+}
+
+#btnLimpar:hover {
+    background-color: #8e0000;
+}
