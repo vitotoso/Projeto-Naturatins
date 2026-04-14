@@ -12,35 +12,36 @@
     <form action="documento.html" method="get" autocomplete="off"><!--TROCAR O GET NÂO E SEGURO PARA FORMULARIOS REAIS O GET QUE ESTÀ ATUAL E PARA FINALIDADES DE TESTE -->
 
         <div class="grupo">
-            <label for="campo1">Teste:</label>
-            <input type="text" id="campo1" name="campo1" placeholder="Insira algo aqui">
+            <label for="campo1">Codigo do Processo</label>
+            <input type="text" id="cod_processo" name="campo1" placeholder="Insira o codigo do processo aqui">
         </div>
 
         <div class="grupo">
-            <label for="campo2">Teste:</label>
-            <input type="text" id="campo2" name="campo2">
+            <label for="campo2">Nome do Requerente</label>
+            <input type="text" id="nome_requerente" name="campo2">
         </div>
-
         <div class="grupo">
-            <label for="select1">Select:</label>
-            <select id="select1" name="select1">
-                <option value="">Selecione...</option>
-                <option value="op1">Placeholder</option>
-                <option value="op2">Placeholder</option>
-                <option value="op3">Placeholder</option>
+            <label for="select1">Porte</label>
+            <select id="Porte" name="select1"> 
+                <option value="Peq">Pequeno</option>
+                <option value="Med">Médio</option>
+                <option value="Gran">Grande</option>
+            </select>
+        </div>
+        <div class="grupo">
+            <label for="select1">Municipio</label>
+            <select id="Porte" name="select1"> 
+                <option value="municipio"></option>
+                <option value="municipio"></option>
+                <option value="municipio"></option>
             </select>
         </div>
 
-        <div class="grupo">
-            <label for="textarea1">Text-area:</label>
-            <textarea id="textarea1" name="textarea1" rows="4"></textarea>
-        </div>
 
-        <div class="grupo">
-            <label for="data"><b>Data</b></label>
-            <input type="datetime-local" id="data" name="data">
-        </div>
 
+
+
+        
         <div class="grupo">
             <input type="checkbox" class="checkbox" id="check1" name="opcoes[]" value="op1">
             <label for="check1"><b>Placeholder</b></label>
@@ -51,6 +52,18 @@
             <input type="checkbox" class="checkbox" id="check3" name="opcoes[]" value="op3">
             <label for="check3"><b>Placeholder</b></label>
         </div>
+
+        <div class="grupo">
+            <label for="textarea1">Text-area:</label>
+            <textarea id="textarea1" name="textarea1" rows="4"></textarea>
+        </div>
+
+        <div class="grupo">
+            <label for="data"><b>Data</b></label>
+            <input type="date" id="data" name="data">
+        </div>
+
+        
 
         <div class="grupo">
             <label for="arquivo"><b>Envie algo</b></label>
