@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!estadoEscolhido) return;
 */
-    fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/TO /municipios`)
+    fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/TO/municipios`)
       .then(resposta => resposta.json())
       .then(municipios => {
         select_cidade.innerHTML = "";
