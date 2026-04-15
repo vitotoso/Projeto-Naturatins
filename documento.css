@@ -1,0 +1,130 @@
+/* Estilos de visualização e Reset */
+:root {
+  --bg-canvas: #525659; /* Cor de fundo tipo leitor de PDF */
+  --page-white: #ffffff;
+  --text-color: #000000;
+  --header-gray: #d9d9d9; /* Cinza de destaque do Word */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  font-family: "Times New Roman", Times, serif;
+  color: var(--text-color);
+  line-height: 1.4;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* Simulação da folha A4 */
+.page {
+  background: var(--page-white);
+  width: 210mm;
+  min-height: 297mm;
+  padding: 2.5cm 2.5cm;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cidade-data {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 12pt;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* Títulos com destaque cinza solicitado */
+h2 {
+  background-color: var(--header-gray);
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  display: block;
+}
+
+.data-row {
+  margin-bottom: 4px;
+  font-size: 11pt;
+  display: flex;
+}
+
+.label {
+  font-weight: bold;
+  min-width: 160px;
+}
+
+.placeholder {
+  color: #000000;
+  border-bottom: 1px dotted #999;
+  flex-grow: 1;
+}
+
+.texto-corpo {
+  text-align: justify;
+  text-indent: 1.5cm;
+  margin-bottom: 15px;
+  font-size: 11pt;
+}
+
+.lista-itens {
+  margin-left: 2cm;
+  margin-bottom: 15px;
+  font-size: 11pt;
+}
+
+.lista-itens li {
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+.assinatura-container {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.linha-assinatura {
+  border-top: 1px solid #000;
+  width: 300px;
+  margin: 0 auto 5px auto;
+}
+
+.cargo {
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+/* Estilos para impressão */
+@media print {
+  body {
+    background: none;
+    padding: 0;
+  }
+  .page {
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+    padding: 1.5cm;
+  }
+}

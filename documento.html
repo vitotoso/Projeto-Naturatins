@@ -1,15 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Documento aqui</p>
-    <p id="mostrarCod"></p>
-    <p id="mostrarNome"></p>
-    <a href="formulario.html">Botão de voltar</a>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template - Parecer Técnico</title>
+    <link rel="stylesheet" href="documento.css">
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>PARECER TÉCNICO</h1>
+      </header>
+
+      <div class="cidade-data">[CIDADE], [DIA] DE [MÊS] DE [ANO].</div>
+
+      <section>
+        <h2>DADOS GERAIS</h2>
+        <div class="data-row">
+          <span class="label">Processo:</span>
+          <span class="placeholder" id="mostrarCod"></span>
+        </div>
+        <div class="data-row">
+          <span class="label">Requerimento:</span>
+          <span class="placeholder" id="mostrarNome"></span>
+        </div>
+        <div class="data-row">
+          <span class="label">Requerente:</span>
+          <span class="placeholder">[NOME DO REQUERENTE]</span>
+        </div>
+        <div class="data-row">
+          <span class="label">Ato Administrativo:</span>
+          <span class="placeholder">[TIPO DE LICENÇA/ATO]</span>
+        </div>
+        <div class="data-row">
+          <span class="label">Atividade:</span>
+          <span class="placeholder">[DESCRIÇÃO DA ATIVIDADE / PORTE]</span>
+        </div>
+        <div class="data-row">
+          <span class="label">Área da Propriedade:</span>
+          <span class="placeholder">[VALOR] ha</span>
+        </div>
+        <div class="data-row">
+          <span class="label">Área de Atividade:</span>
+          <span class="placeholder">[VALOR] ha</span>
+        </div>
+        <div class="data-row">
+          <span class="label">Município:</span>
+          <span class="placeholder" id="mostrarCid"></span>
+        </div>
+      </section>
+
+      <section>
+        <h2>ANÁLISE</h2>
+        <p class="texto-corpo">
+          O presente Parecer Técnico remete-se à análise da documentação
+          apresentada com vistas à emissão da [TIPO DE LICENÇA] do
+          empreendimento pertencente à [NOME DO REQUERENTE], com atividade de
+          [ATIVIDADE], localizado na propriedade [NOME DA PROPRIEDADE /
+          ENDEREÇO], zona rural do município de [MUNICÍPIO] – [UF].
+        </p>
+        <p class="texto-corpo">
+          Esta análise foi subsidiada pelos parâmetros elencados no Termo de
+          Referência para elaboração do Projeto Ambiental e legislações
+          vigentes, incluindo a Resolução COEMA n° [NÚMERO/ANO].
+        </p>
+
+        <p class="texto-corpo"><strong>PENDÊNCIAS IDENTIFICADAS:</strong></p>
+        <ul class="lista-itens">
+          <li>[DESCREVER PENDÊNCIA 01 OU REMOVER];</li>
+          <li>[DESCREVER PENDÊNCIA 02 OU REMOVER];</li>
+          <li>[DESCREVER PENDÊNCIA 03 OU REMOVER].</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>OBSERVAÇÕES / CONDICIONANTES</h2>
+        <ul class="lista-itens">
+          <li>[INSERIR CONDICIONANTE 01];</li>
+          <li>[INSERIR CONDICIONANTE 02];</li>
+          <li>[INSERIR CONDICIONANTE 03].</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>RECOMENDAÇÕES</h2>
+        <p class="texto-corpo">
+          O empreendedor é responsável pelo cumprimento das medidas mitigadoras
+          propostas no Estudo Ambiental. Caso seja verificada omissão ou
+          declaração falsa de informações, esta licença poderá ser suspensa ou
+          cancelada.
+        </p>
+      </section>
+ t 
+      <section>
+        <h2>CONCLUSÃO</h2>
+        <p class="texto-corpo">
+          Parecer: Diante do exposto, manifesta-se de forma
+          <strong>[FAVORÁVEL / DESFAVORÁVEL]</strong> à emissão da Licença
+          pleiteada para a atividade.
+        </p>
+      </section>
+
+      <div class="assinatura-container">
+        <div class="linha-assinatura"></div>
+        <span class="cargo">[NOME DO TÉCNICO RESPONSÁVEL]</span><br />
+        [DEPARTAMENTO / ÓRGÃO]
+      </div>
+    </div>
     <script src="doc.js"></script>
-</body>
+  </body>
 </html>
