@@ -177,6 +177,10 @@ section {
   font-size: 11pt;
 }
 
+span{
+  font: bold;
+}
+
 /* IMPRESSÃO */
 @media print {
   body {

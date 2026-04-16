@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const select_cidade = document.getElementById("municipio");
 //   const select_estado = document.getElementById("estado");
-  console.log(select_cidade)
   /* função para pegar os estados
   fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
     .then(dados => dados.json())

@@ -39,7 +39,6 @@ const data  = () => {
     return "Palmas, " + dia +" de " + mes + " de " + ano;
 }
 
-console.log(data());
 
 let calendario = data();
 mostrar("calendario", calendario)
