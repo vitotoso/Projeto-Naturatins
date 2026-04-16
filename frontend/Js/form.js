@@ -17,6 +17,8 @@ form.addEventListener("submit", function(event){ // praticamente quando o formul
     let areaAtividade = document.getElementById("areaAtvd").value
     let endereco = document.getElementById("Endereço").value
 
+    const verificar = (areaAtividade,propriedade) => {"console"}
+
 
     salvar("codigoProcesso", cod); //setta os valores
     salvar("nomeRequerente", nome);
