@@ -45,6 +45,7 @@ textarea:focus {
 
 .checkbox {
     width: auto;
+    padding: 5%;
 }
 
 button {
