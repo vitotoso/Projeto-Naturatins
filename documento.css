@@ -1,9 +1,8 @@
-/* Estilos de visualização e Reset */
 :root {
-  --bg-canvas: #525659; /* Cor de fundo tipo leitor de PDF */
+  --bg-canvas: #525659;
   --page-white: #ffffff;
   --text-color: #000000;
-  --header-gray: #d9d9d9; /* Cinza de destaque do Word */
+  --header-gray: #d9d9d9;
 }
 
 * {
@@ -16,106 +15,169 @@ body {
   background-color: var(--bg-canvas);
   font-family: "Times New Roman", Times, serif;
   color: var(--text-color);
-  line-height: 1.4;
+  line-height: 1.5;
   display: flex;
   justify-content: center;
   padding: 40px 0;
 }
 
-/* Simulação da folha A4 */
 .page {
   background: var(--page-white);
   width: 210mm;
   min-height: 297mm;
-  padding: 2.5cm 2.5cm;
+  padding: 1.5cm 2.5cm 2.5cm 2.5cm;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
+/* CABEÇALHO */
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-h1 {
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 250px;
+  margin-bottom: 20px;
+
+}
+
+.logo-box {
+  width: 80px;
+  height: 50px;
+  border: 2px solid #2e7d3200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9pt;
+  font-weight: bold;
+  color: #2e7d32;
+  text-align: center;
+  padding: 4px;
+}
+
+.cabecalho-texto {
+  font-size: 8pt;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* TÍTULO */
+.titulo-doc {
+  text-align: center;
   font-size: 14pt;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 18px 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .cidade-data {
+  text-align: right;
+  font-size: 11pt;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+/* SEÇÕES */
+.secao-titulo {
+  background-color: var(--header-gray);
+  font-size: 11pt;
+  font-weight: bold;
+  text-align: center;
   text-transform: uppercase;
-  margin-bottom: 30px;
-  font-size: 12pt;
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
 }
 
 section {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-/* Títulos com destaque cinza solicitado */
-h2 {
-  background-color: var(--header-gray);
-  font-size: 12pt;
-  font-weight: bold;
-  padding: 4px 8px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  display: block;
-}
-
-.data-row {
-  margin-bottom: 4px;
-  font-size: 11pt;
+/* DADOS GERAIS */
+.dado-row {
   display: flex;
+  font-size: 11pt;
+  margin-bottom: 2px;
 }
 
-.label {
+.dado-label {
   font-weight: bold;
-  min-width: 160px;
+  min-width: 170px;
 }
 
-.placeholder {
-  color: #000000;
-  border-bottom: 1px dotted #999;
+.dado-valor {
   flex-grow: 1;
+  border-bottom: 1px dotted #aaa;
 }
 
+/* TEXTO CORRIDO */
 .texto-corpo {
+  font-size: 11pt;
   text-align: justify;
   text-indent: 1.5cm;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* LISTAS */
+.lista {
+  margin-left: 1.5cm;
+  margin-bottom: 10px;
   font-size: 11pt;
 }
 
-.lista-itens {
-  margin-left: 2cm;
-  margin-bottom: 15px;
-  font-size: 11pt;
-}
-
-.lista-itens li {
-  margin-bottom: 8px;
+.lista li {
+  margin-bottom: 6px;
   text-align: justify;
 }
 
-.assinatura-container {
+/* PENDÊNCIAS */
+.pendencias-titulo {
+  font-size: 11pt;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.lista-pendencias {
+  margin-left: 1cm;
+  font-size: 11pt;
+}
+
+.lista-pendencias li {
+  margin-bottom: 8px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+/* ASSINATURA */
+.assinatura {
   margin-top: 50px;
   text-align: center;
-  width: 100%;
 }
 
 .linha-assinatura {
   border-top: 1px solid #000;
-  width: 300px;
-  margin: 0 auto 5px auto;
+  width: 280px;
+  margin: 0 auto 4px auto;
 }
 
-.cargo {
+.assinatura-nome {
   font-weight: bold;
   font-size: 11pt;
 }
 
-/* Estilos para impressão */
+.assinatura-cargo {
+  font-size: 11pt;
+}
+
+/* IMPRESSÃO */
 @media print {
   body {
     background: none;
@@ -124,7 +186,6 @@ h2 {
   .page {
     box-shadow: none;
     width: 100%;
-    margin: 0;
     padding: 1.5cm;
   }
 }
