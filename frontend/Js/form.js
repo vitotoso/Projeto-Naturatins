@@ -34,6 +34,30 @@ function buscarTexto(tipo, resposta) {
         Sim:"A atividade faz uso direto de recursos hídricos com autorização válida. ",
         Nao:"A atividade faz uso direto de recursos hídricos sem autorização, sendo necessária regularização. "
     },
+    OpcApoio:{
+        Sim:"Verifica-se uso de água para atividades de apoio, devendo ser regularizado. ",
+        Nao:"Não há uso relevante de água para apoio. "
+    },
+    OpcSpr:{
+        Sim:"O empreendimento prevê supressão de vegetação. ",
+        Nao:"O empreendimento não prevê supressão de vegetação. "
+    },
+    OpcInfr:{
+        Sim:"Foi verificada infraestrutura compatível. ",
+        Nao:"Não foi verificada infraestrutura adequada."
+    },
+    OpcResi:{
+        Sim:"Os resíduos são gerenciados adequadamente. ",
+        Nao:"Não há gestão adequada de resíduos. "
+    },
+    OpcCons:{
+        Sim:"O empreendimento encontra-se inserido em Unidade de Conservação. ",
+        Nao:"O empreendimento não se encontra inserido em Unidade de Conservação. "
+    },
+    OpcAna:{
+        Sim:"Diante do exposto, opina-se de forma favorável à emissão da licença. ",
+        Nao:"Diante do exposto, opina-se de forma desfavorável à emissão da licença. "
+    }
 };
 
 form.addEventListener("submit", function(event){ // praticamente quando o formulario for enviado vai executar a função
@@ -59,16 +83,20 @@ form.addEventListener("submit", function(event){ // praticamente quando o formul
     const OpcCar = buscarTexto("OpcCar", respostaCar);
     const respostaArt =document.querySelector('input[name="OpcArt"]:checked')?.value || "";
     const OpcArt = buscarTexto("OpcArt", respostaArt);
-
-    
-
-    const OpcApoio = document.querySelector('input[name="OpcApoio"]:checked');
-    const OpcSpr = document.querySelector('input[name="OpcSpr"]:checked');
-    const OpcInfr = document.querySelector('input[name="OpcInfr"]:checked');
-    const OpcResi = document.querySelector('input[name="OpcResi"]:checked');
-    const OpcCons = document.querySelector('input[name="OpcCons"]:checked');
-    const OpcAna = document.querySelector('input[name="OpcAna"]:checked');
-    
+    const respostaAgua =document.querySelector('input[name="OpcAgua"]:checked')?.value || "";
+    const OpcAgua = buscarTexto("OpcAgua", respostaAgua);
+    const respostaApoio =document.querySelector('input[name="OpcApoio"]:checked')?.value || "";
+    const OpcApoio = buscarTexto("OpcApoio", respostaApoio);
+    const respostaSpr =document.querySelector('input[name="OpcSpr"]:checked')?.value || "";
+    const OpcSpr = buscarTexto("OpcSpr", respostaSpr);
+    const respostaInfr =document.querySelector('input[name="OpcInfr"]:checked')?.value || "";
+    const OpcInfr = buscarTexto("OpcInfr", respostaInfr);
+    const respostaResi =document.querySelector('input[name="OpcResi"]:checked')?.value || "";
+    const OpcResi = buscarTexto("OpcResi", respostaResi);
+    const respostaCons =document.querySelector('input[name="OpcCons"]:checked')?.value || "";
+    const OpcCons = buscarTexto("OpcCons", respostaCons);
+    const respostaAna =document.querySelector('input[name="OpcAna"]:checked')?.value || "";
+    const OpcAna = buscarTexto("OpcAna", respostaAna);
 
     
     
