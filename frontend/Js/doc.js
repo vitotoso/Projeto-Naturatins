@@ -11,6 +11,14 @@ let endereco = localStorage.getItem("Endereço")
 let OpcDoc = localStorage.getItem("OpcDoc")
 let OpcCar = localStorage.getItem("OpcCar")
 let OpcArt = localStorage.getItem("OpcArt")
+let OpcAgua = localStorage.getItem("OpcAgua")
+let OpcApoio = localStorage.getItem("OpcApoio")
+let OpcSpr = localStorage.getItem("OpcSpr")
+let OpcInfr = localStorage.getItem("OpcInfr")
+let OpcResi = localStorage.getItem("OpcResi")
+let OpcCons = localStorage.getItem("OpcCons")
+let OpcAna = localStorage.getItem("OpcAna")
+
 
 console.log(OpcCar)
 
@@ -38,6 +46,17 @@ mostrar("endereco", endereco)
 mostrar("OpcDoc" , OpcDoc)
 mostrar("OpcCar" , OpcCar)
 mostrar("OpcArt" , OpcArt)
+mostrar("OpcAgua" , OpcAgua)
+mostrar("OpcApoio" , OpcApoio)
+mostrar("OpcSpr" , OpcSpr)
+mostrar("OpcInfr" , OpcInfr)
+mostrar("OpcResi" , OpcResi)
+mostrar("OpcCons" , OpcCons)
+mostrar("OpcAna" , OpcAna)
+
+
+
+
 const data  = () => {
     const hoje = new Date()
     let dia = hoje.getDate();

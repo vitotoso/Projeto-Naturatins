@@ -113,13 +113,13 @@ form.addEventListener("submit", function(event){ // praticamente quando o formul
     salvar("OpcDoc", OpcDoc)
     salvar("OpcCar", OpcCar)
     salvar("OpcArt", OpcArt)
-    // salvar("OpcAgua", OpcAgua)
-    // salvar("OpcApoio", OpcApoio)
-    // salvar("OpcSpr", OpcSpr)
-    // salvar("OpcInfr", OpcInfr)
-    // salvar("OpcResi", OpcResi)
-    // salvar("OpcCons", OpcCons)
-    // salvar("OpcAna", OpcAna)
+    salvar("OpcAgua", OpcAgua)
+    salvar("OpcApoio", OpcApoio)
+    salvar("OpcSpr", OpcSpr)
+    salvar("OpcInfr", OpcInfr)
+    salvar("OpcResi", OpcResi)
+    salvar("OpcCons", OpcCons)
+    salvar("OpcAna", OpcAna)
 
 
 
