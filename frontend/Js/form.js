@@ -61,8 +61,6 @@ function buscarTexto(tipo, resposta) {
 };
 
 
-
-
 const textareas = document.querySelectorAll("textarea");
 
 textareas.forEach(function (textarea) {
@@ -88,8 +86,6 @@ document.querySelectorAll(".grupo").forEach(function (campo) {
         atualizarContador(textarea, contador);
     });
 });
-
-
 
 form.addEventListener("submit", function(event){ // praticamente quando o formulario for enviado vai executar a função
     event.preventDefault(); // impede a paginad e recarregar e perder o processo
@@ -158,3 +154,26 @@ form.addEventListener("submit", function(event){ // praticamente quando o formul
 
     window.location.href = "documento.html"; //redireciona pra proxima pagina
 });
+
+function monitoramento(nome, just, alvo) {
+    const op = document.querySelectorAll(`input[name="${nome}"]`);
+    const justificativa = document.getElementById(just);
+
+    if (!op.length || !justificativa) return; //verifica se tem o radio/div
+
+    function atualizar() { //controla a exibção
+      const selecionado = document.querySelector(`input[name="${nome}"]:checked`);
+      const valor = selecionado ? selecionado.value : null;
+
+      justificativa.style.display = (valor === alvo) ? "block" : "none";
+    }
+
+    op.forEach(radio => {
+      radio.addEventListener("change", atualizar);
+    });
+
+    atualizar();
+}
+
+monitoramento("OpcDoc", "justificativaDocs", "Nao");
+monitoramento("exemplos", "justify", "outros")
