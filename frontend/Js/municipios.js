@@ -19,20 +19,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!estadoEscolhido) return;
 */
-    fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/TO/municipios`)
-      .then(resposta => resposta.json())
-      .then(municipios => {
-        select_cidade.innerHTML = "";
+const listaCidades = document.getElementById("lista-cidades");
+
+fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados/TO/municipios")
+    .then(resposta => resposta.json())
+    .then(municipios => {
+        listaCidades.innerHTML = "";
 
         municipios.forEach(municipio => {
-          const opcao = document.createElement("option");
-          opcao.value = municipio.nome;
-          opcao.textContent = municipio.nome;
-          select_cidade.appendChild(opcao);
+            const opcao = document.createElement("option");
+
+            opcao.value = municipio.nome;
+
+            listaCidades.appendChild(opcao);
         });
-      })
-      .catch(erro => {
+    })
+    .catch(erro => {
         console.error("Erro ao buscar municípios:", erro);
-      });
-  });
-  
+    })});

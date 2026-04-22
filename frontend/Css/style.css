@@ -6,9 +6,9 @@ body {
     scroll-behavior: smooth;
 }
 .logo-area{
- display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 .logo-box{
     width: 90%;
@@ -32,6 +32,7 @@ body {
 .grupo {
     margin-bottom: 20px;
     color: #005208;
+    
 }
 
 .grupo label{
@@ -42,8 +43,23 @@ body {
 
     accent-color: #427c46;
     width: auto;
-    margin:30px 5%;
+    margin:30px 2%;
 }
+
+.grupo textarea{
+    max-width: 90%;
+    min-width: 90%;
+    min-height: 40px;
+    max-height: 400px;
+    resize: none;
+    overflow: hidden;
+}
+
+.grupo p{
+    font-size: small;
+}
+
+
 
 label {
     font-weight: bold;

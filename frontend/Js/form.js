@@ -60,6 +60,37 @@ function buscarTexto(tipo, resposta) {
     }
 };
 
+
+
+
+const textareas = document.querySelectorAll("textarea");
+
+textareas.forEach(function (textarea) {
+    textarea.addEventListener("input", function () {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    });
+});
+
+function atualizarContador(textarea, contador) {
+    contador.textContent = `${textarea.value.length} / ${textarea.maxLength}`;
+}
+
+document.querySelectorAll(".grupo").forEach(function (campo) {
+    const textarea = campo.querySelector("textarea");
+    const contador = campo.querySelector(".contador");
+
+    if (!textarea || !contador) return;
+
+    atualizarContador(textarea, contador);
+
+    textarea.addEventListener("input", function () {
+        atualizarContador(textarea, contador);
+    });
+});
+
+
+
 form.addEventListener("submit", function(event){ // praticamente quando o formulario for enviado vai executar a função
     event.preventDefault(); // impede a paginad e recarregar e perder o processo
     const salvar = (chave, valor) => localStorage.setItem(chave, valor)

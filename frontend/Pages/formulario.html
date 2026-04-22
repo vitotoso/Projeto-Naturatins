@@ -45,6 +45,7 @@
                 <option value="Médio">Médio</option>
                 <option value="Grande">Grande</option>
             </select>
+            
         </div>
         <div class="grupo">
             <label for="campo2">Área da Propriedade:</label>
@@ -60,10 +61,11 @@
             </select>
         </div>         -->
         <div class="grupo">
-            <label for="select1">Municipio</label>
-            <select id="municipio" name="select1"> 
-            </select>
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" list="lista-cidades" placeholder="Digite a cidade"/>
+            <datalist id="lista-cidades"></datalist>
         </div>
+        
         <div class="grupo">
             <h4>Todos os documentos obrigatórios foram apresentados?</h4>
             <label for = "OpcDoc" class = "">Sim
@@ -183,18 +185,25 @@
 
         <div class="grupo">
             <h4>Qual o resultado da análise?</h4>
-            <label for = "OpcAna">Sim
+            <label for = "OpcAna">Favorável
             <input type="radio" name="OpcAna" class ="radio" value="Sim">
             </label>
-            <label for = "OpcAna">Não
+            <label for = "OpcAna">Desfavorável
             <input type="radio" name="OpcAna"  class="radio" value="Nao">
             </label>
-            <label for = "OpcAna">Não se Aplica
-            <input type="radio" name="OpcAna" class="radio" value="NA">
-            </label>
+        </div>
+        
+        <div class="grupo">
+            <label for="">Observações</label>
+            <textarea class="mensagem" maxlength="500" name="txtObs" id="txtObs"></textarea>
+            <p class="contador">0 / 500</p>
         </div>
 
-
+        <div class="grupo">
+            <label for="txtCond">Condicionantes</label>
+            <textarea class="mensagem" maxlength="500" name="txtCond" id="txtCond"></textarea>
+            <p class="contador">0 / 500</p>
+        </div>
 
         <div class="grupo">
             <button type="submit" id="btnCadastrar" name="btnCadastrar">
