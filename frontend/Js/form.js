@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-
+const propriedade = document.getElementById("areaProp")
 function buscarTexto(tipo, resposta) {
     if (!regras[tipo]) {
         return "";
@@ -177,3 +177,14 @@ function monitoramento(nome, just, alvo) {
 
 monitoramento("OpcDoc", "justificativaDocs", "Nao");
 monitoramento("exemplos", "justify", "outros")
+
+propriedade.addEventListener("input", function(event){
+    const atvElement = document.getElementById("areaAtvd");
+    const atv = parseFloat(atvElement.value);
+    const prop = parseFloat(propriedade.value);
+    atvElement.max = prop;
+    if (atv > prop){
+        atvElement.value = 0;
+        throw new Error("Valor da area de atividade maior que a area de propriedade");
+    };
+});
