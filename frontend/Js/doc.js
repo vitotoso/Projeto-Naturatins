@@ -69,3 +69,9 @@ const data  = () => {
 
 let calendario = data();
 mostrar("calendario", calendario)
+
+const imprimir = document.getElementById("impressao");
+
+imprimir.addEventListener("click", () =>{
+    html2pdf().from(document.querySelector(".page")).save()
+})
