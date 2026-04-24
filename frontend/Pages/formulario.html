@@ -1,239 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
-    <link rel="stylesheet" href="/frontend/Css/style.css">
-</head>
-<body>
-
-<div class="conteudo">
-    <form action="documento.html" method="get" autocomplete="off"><!--TROCAR O GET NÂO E SEGURO PARA FORMULARIOS REAIS O GET QUE ESTÀ ATUAL E PARA FINALIDADES DE TESTE -->
+    <link rel="stylesheet" href="/frontend/Css/style.css" />
+  </head>
+  <body>
+    <div class="conteudo">
+      <form action="documento.html" method="get" autocomplete="off">
+        <!--TROCAR O GET NÂO E SEGURO PARA FORMULARIOS REAIS O GET QUE ESTÀ ATUAL E PARA FINALIDADES DE TESTE -->
         <div class="logo-area">
-           <div class="logo-box"><img src="/frontend/assets/images/1-1024x1024.png" width="200px"></div>
+          <div class="logo-box">
+            <img src="/frontend/assets/images/1-1024x1024.png" width="200px" />
+          </div>
         </div>
         <div class="grupo">
-            <label for="campo1">Codigo do Processo</label>
-            <input type="text" id="cod_processo" name="campo1" placeholder="Insira o codigo do processo aqui" autocomplete="off">
+          <label for="campo1">Codigo do Processo</label>
+          <input
+            type="text"
+            id="cod_processo"
+            name="campo1"
+            placeholder="Insira o codigo do processo aqui"
+            autocomplete="off"
+          />
         </div>
         <div class="grupo">
-            <label for="campo2">Requerimento: </label>
-            <input type="text" id="requerimento" name="campo2" placeholder="Insira o requerimento aqui" autocomplete="off">
+          <label for="campo2">Requerimento: </label>
+          <input
+            type="text"
+            id="requerimento"
+            name="campo2"
+            placeholder="Insira o requerimento aqui"
+            autocomplete="off"
+          />
         </div>
 
         <div class="grupo">
-            <label for="campo3">Nome do Requerente</label>
-            <input type="text" id="nome_requerente" name="campo3" placeholder="Insira o nome do Requerente" autocomplete="on" autocapitalize="on">
+          <label for="campo3">Nome do Requerente</label>
+          <input
+            type="text"
+            id="nome_requerente"
+            name="campo3"
+            placeholder="Insira o nome do Requerente"
+            autocomplete="on"
+            autocapitalize="on"
+          />
         </div>
         <div class="grupo">
-            <label for="campo4">Ato administrativo:</label>
-            <input type="text" id="Ato" name="campo4" autocomplete="on" autocapitalize="on">
+          <label for="campo4">Ato administrativo:</label>
+          <input
+            type="text"
+            id="Ato"
+            name="campo4"
+            autocomplete="on"
+            autocapitalize="on"
+          />
         </div>
         <div class="grupo">
-            <label for="campo5">Endereço da Propriedade:</label>
-            <input type="text" id="Endereço" name="campo5" autocomplete="on" autocapitalize="on">
+          <label for="campo5">Endereço da Propriedade:</label>
+          <input
+            type="text"
+            id="Endereço"
+            name="campo5"
+            autocomplete="on"
+            autocapitalize="on"
+          />
         </div>
         <div class="grupo">
-            <label for="campo6">Data de chegada do processo:</label>
-            <input type="date" id="Endereço" name="campo6" autocomplete="on" autocapitalize="on">
+          <label for="campo6">Data de chegada do processo:</label>
+          <input
+            type="date"
+            id="Endereço"
+            name="campo6"
+            autocomplete="on"
+            autocapitalize="on"
+          />
         </div>
         <div class="grupo">
-            <label for="select1">Porte</label>
-            <select id="Porte" name="select1"> 
-                <option value="Pequeno">Pequeno</option>
-                <option value="Médio">Médio</option>
-                <option value="Grande">Grande</option>
-            </select>
-            
+          <label for="select1">Porte</label>
+          <select id="Porte" name="select1">
+            <option value="Pequeno">Pequeno</option>
+            <option value="Médio">Médio</option>
+            <option value="Grande">Grande</option>
+          </select>
         </div>
         <div class="grupo">
-            <label for="campo2">Área da Propriedade:</label>
-            <input type="number" id="areaProp" min="0.0001" step="0.0001" name="campo2" autocomplete="off" autocapitalize="on">
-        </div>        
+          <label for="campo2">Área da Propriedade:</label>
+          <input
+            type="number"
+            id="areaProp"
+            min="0.0001"
+            step="0.0001"
+            name="campo2"
+            autocomplete="off"
+            autocapitalize="on"
+          />
+        </div>
         <div class="grupo">
-            <label for="campo2">Área da Atividade:</label>
-            <input type="number" id="areaAtvd" min="0.0001" step="0.0001" name="campo2" autocomplete="off" autocapitalize="on">
-        </div>        
+          <label for="campo2">Área da Atividade:</label>
+          <input
+            type="number"
+            id="areaAtvd"
+            min="0.0001"
+            step="0.0001"
+            name="campo2"
+            autocomplete="off"
+            autocapitalize="on"
+          />
+        </div>
         <!-- <div class="grupo"> select para estádo
             <label for="select1">Estado:</label>
             <select id="estado" name="select1"> 
             </select>
         </div>         -->
         <div class="grupo">
-            <label for="cidade">Cidade</label>
-            <input type="text" id="municipio" list="lista-cidades" placeholder="Digite a cidade"/>
-            <datalist id="lista-cidades"></datalist>
+          <label for="cidade">Cidade</label>
+          <input
+            type="text"
+            id="municipio"
+            list="lista-cidades"
+            placeholder="Digite a cidade"
+          />
+          <datalist id="lista-cidades"></datalist>
         </div>
 
         <div class="grupo">
-            <h4>Todos os documentos obrigatórios foram apresentados?</h4>
-            <label for = "OpcDoc" class = "">Sim
-            <input type="radio" name="OpcDoc" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcDoc">Não
-            <input type="radio" name="OpcDoc"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcDoc">Não se Aplica
-            <input type="radio" name="OpcDoc" class="radio" value="NA">
-            </label>
+          <h4>Todos os documentos obrigatórios foram apresentados?</h4>
+          <input type="radio" name="OpcDoc" class="radio" value="Sim" />
+          <label for="OpcDoc" class="">Sim</label>
+          <input type="radio" name="OpcDoc" class="radio" value="Nao" />
+          <label for="OpcDoc">Não</label>
+          <input type="radio" name="OpcDoc" class="radio" value="NA" />
+          <label for="OpcDoc">Não se Aplica</label>
         </div>
-        <div id="justificativaDocs" style="display: none;" class="grupo">
-            <label for = "exemplos" class = "">Exemplo 1
-            <input type="radio" name="exemplos" class ="radio" value="Ex1">
-            </label>
-            <label for = "exemplos" class = "">Exemplo 2
-            <input type="radio" name="exemplos" class ="radio" value="Ex2">
-            </label>
-            <label for = "exemplos" class = "">outros
-            <input type="radio" name="exemplos" class ="radio" value="outros">
-            </label>
-            <div id="justify" style="display:none">
-                <label>Justifique</label>
-                <textarea></textarea>
-            </div>
-        </div>
-        <div class="grupo">
-            <h4>O CAR está ativo e regular?</h4>
-            <label for = "OpcCar">Sim
-            <input type="radio" name="OpcCar" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcCar">Não
-            <input type="radio" name="OpcCar"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcCar">Não se Aplica
-            <input type="radio" name="OpcCar" class="radio" value="NA">
-            </label>
+        <div id="justificativaDocs" style="display: none" class="grupo">
+          <h4>Exemplos</h4>
+
+          <input type="radio" name="exemplos" class="radio" value="Ex1" />
+          <label for="exemplos">Exemplo 1</label>
+
+          <input type="radio" name="exemplos" class="radio" value="Ex2" />
+          <label for="exemplos">Exemplo 2</label>
+
+          <input type="radio" name="exemplos" class="radio" value="outros" />
+          <label for="exemplos">Outros</label>
+
+          <div id="justify" style="display: none">
+            <label>Justifique</label>
+            <textarea></textarea>
+          </div>
         </div>
 
         <div class="grupo">
-            <h4>A ART está regular?</h4>
-            <label for = "OpcArt">Sim
-            <input type="radio" name="OpcArt" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcArt">Não
-            <input type="radio" name="OpcArt"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcArt">Não se Aplica
-            <input type="radio" name="OpcArt" class="radio" value="NA">
-            </label>
+          <h4>O CAR está ativo e regular?</h4>
+
+          <input type="radio" name="OpcCar" class="radio" value="Sim" />
+          <label for="OpcCar">Sim</label>
+
+          <input type="radio" name="OpcCar" class="radio" value="Nao" />
+          <label for="OpcCar">Não</label>
+
+          <input type="radio" name="OpcCar" class="radio" value="NA" />
+          <label for="OpcCar">Não se Aplica</label>
         </div>
 
         <div class="grupo">
-            <h4>A atividade utiliza água diretamente?</h4>
-            <label for = "OpcAgua">Sim
-            <input type="radio" name="OpcAgua" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcAgua">Não
-            <input type="radio" name="OpcAgua"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcAgua">Não se Aplica
-            <input type="radio" name="OpcAgua" class="radaio" value="NA">
-            </label>
+          <h4>A ART está regular?</h4>
+
+          <input type="radio" name="OpcArt" class="radio" value="Sim" />
+          <label for="OpcArt">Sim</label>
+
+          <input type="radio" name="OpcArt" class="radio" value="Nao" />
+          <label for="OpcArt">Não</label>
+
+          <input type="radio" name="OpcArt" class="radio" value="NA" />
+          <label for="OpcArt">Não se Aplica</label>
         </div>
 
         <div class="grupo">
-            <h4>Há uso de água para apoio?</h4>
-            <label for = "OpcApoio">Sim
-            <input type="radio" name="OpcApoio" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcApoio">Não
-            <input type="radio" name="OpcApoio"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcApoio">Não se Aplica
-            <input type="radio" name="OpcApoio" class="radio" value="NA">
-            </label>
-        </div>
-        
+          <h4>A atividade utiliza água diretamente?</h4>
 
-        <div class="grupo">
-            <h4>Há supressão vegetal?</h4>
-            <label for = "OpcSpr">Sim
-            <input type="radio" name="OpcSpr" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcSpr">Não
-            <input type="radio" name="OpcSpr"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcSpr">Não se Aplica
-            <input type="radio" name="OpcSpr" class="radio" value="NA">
-            </label>
+          <input type="radio" name="OpcAgua" class="radio" value="Sim" />
+          <label for="OpcAgua">Sim</label>
+
+          <input type="radio" name="OpcAgua" class="radio" value="Nao" />
+          <label for="OpcAgua">Não</label>
+
+          <input type="radio" name="OpcAgua" class="radio" value="NA" />
+          <label for="OpcAgua">Não se Aplica</label>
         </div>
 
         <div class="grupo">
-            <h4>Há infraestrutura adequada?</h4>
-            <label for = "OpcInfr">Sim
-            <input type="radio" name="OpcInfr" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcInfr">Não
-            <input type="radio" name="OpcInfr"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcInfr">Não se Aplica
-            <input type="radio" name="OpcInfr" class="radio" value="NA">
-            </label>
+          <h4>Há uso de água para apoio?</h4>
+
+          <input type="radio" name="OpcApoio" class="radio" value="Sim" />
+          <label for="OpcApoio">Sim</label>
+
+          <input type="radio" name="OpcApoio" class="radio" value="Nao" />
+          <label for="OpcApoio">Não</label>
+
+          <input type="radio" name="OpcApoio" class="radio" value="NA" />
+          <label for="OpcApoio">Não se Aplica</label>
         </div>
 
         <div class="grupo">
-            <h4>Há gestão adequada de resíduos?</h4>
-            <label for = "OpcResi">Sim
-            <input type="radio" name="OpcResi" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcResi">Não
-            <input type="radio" name="OpcResi"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcResi">Não se Aplica
-            <input type="radio" name="OpcResi" class="radio" value="NA">
-            </label>
+          <h4>Há supressão vegetal?</h4>
+
+          <input type="radio" name="OpcSpr" class="radio" value="Sim" />
+          <label for="OpcSpr">Sim</label>
+
+          <input type="radio" name="OpcSpr" class="radio" value="Nao" />
+          <label for="OpcSpr">Não</label>
+
+          <input type="radio" name="OpcSpr" class="radio" value="NA" />
+          <label for="OpcSpr">Não se Aplica</label>
         </div>
 
         <div class="grupo">
-            <h4>Está em Unidade de Conservação?</h4>
-            <label for = "OpcCons">Sim
-            <input type="radio" name="OpcCons" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcCons">Não
-            <input type="radio" name="OpcCons"  class="radio" value="Nao">
-            </label>
-            <label for = "OpcCons">Não se Aplica
-            <input type="radio" name="OpcCons" class="radio" value="NA">
-            </label>
+          <h4>Há infraestrutura adequada?</h4>
+
+          <input type="radio" name="OpcInfr" class="radio" value="Sim" />
+          <label for="OpcInfr">Sim</label>
+
+          <input type="radio" name="OpcInfr" class="radio" value="Nao" />
+          <label for="OpcInfr">Não</label>
+
+          <input type="radio" name="OpcInfr" class="radio" value="NA" />
+          <label for="OpcInfr">Não se Aplica</label>
         </div>
 
         <div class="grupo">
-            <h4>Qual o resultado da análise?</h4>
-            <label for = "OpcAna">Favorável
-            <input type="radio" name="OpcAna" class ="radio" value="Sim">
-            </label>
-            <label for = "OpcAna">Desfavorável
-            <input type="radio" name="OpcAna"  class="radio" value="Nao">
-            </label>
-        </div>
-        
-        <div class="grupo">
-            <label for="">Observações</label>
-            <textarea class="mensagem" maxlength="500" name="txtObs" id="txtObs"></textarea>
-            <p class="contador">0 / 500</p>
+          <h4>Há gestão adequada de resíduos?</h4>
+
+          <input type="radio" name="OpcResi" class="radio" value="Sim" />
+          <label for="OpcResi">Sim</label>
+
+          <input type="radio" name="OpcResi" class="radio" value="Nao" />
+          <label for="OpcResi">Não</label>
+
+          <input type="radio" name="OpcResi" class="radio" value="NA" />
+          <label for="OpcResi">Não se Aplica</label>
         </div>
 
         <div class="grupo">
-            <label for="txtCond">Condicionantes</label>
-            <textarea class="mensagem" maxlength="500" name="txtCond" id="txtCond"></textarea>
-            <p class="contador">0 / 500</p>
+          <h4>Está em Unidade de Conservação?</h4>
+
+          <input type="radio" name="OpcCons" class="radio" value="Sim" />
+          <label for="OpcCons">Sim</label>
+
+          <input type="radio" name="OpcCons" class="radio" value="Nao" />
+          <label for="OpcCons">Não</label>
+
+          <input type="radio" name="OpcCons" class="radio" value="NA" />
+          <label for="OpcCons">Não se Aplica</label>
         </div>
 
         <div class="grupo">
-            <button type="submit" id="btnCadastrar" name="btnCadastrar">
-                Cadastrar
-            </button>
+          <h4>Qual o resultado da análise?</h4>
 
-            <button type="reset" id="btnLimpar">
-                Limpar
-            </button>
+          <input type="radio" name="OpcAna" class="radio" value="Favoravel" />
+          <label for="OpcAna">Favorável</label>
+
+          <input
+            type="radio"
+            name="OpcAna"
+            class="radio"
+            value="Desfavoravel"
+          />
+          <label for="OpcAna">Desfavorável</label>
         </div>
+        <div class="grupo">
+          <button type="submit" id="btnCadastrar" name="btnCadastrar">
+            Cadastrar
+          </button>
 
-    </form>
-</div>
-<script src="/frontend/Js/municipios.js"></script>
-<script src="/frontend/Js/form.js"></script>
-
-</body>
+          <button type="reset" id="btnLimpar">Limpar</button>
+        </div>
+      </form>
+    </div>
+    <script src="/frontend/Js/municipios.js"></script>
+    <script src="/frontend/Js/form.js"></script>
+  </body>
 </html>
