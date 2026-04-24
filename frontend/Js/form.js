@@ -87,74 +87,54 @@ document.querySelectorAll(".grupo").forEach(function (campo) {
     });
 });
 
-form.addEventListener("submit", function(event){ // praticamente quando o formulario for enviado vai executar a função
-    event.preventDefault(); // impede a paginad e recarregar e perder o processo
-    const salvar = (chave, valor) => localStorage.setItem(chave, valor)
-    let cod = document.getElementById("cod_processo").value;
-    let nome = document.getElementById("nome_requerente").value;
-    // let estado = document.getElementById("estado").value;
-    let municipio = document.getElementById("municipio").value
-    let requerimento = document.getElementById("requerimento").value
-    let ato = document.getElementById("Ato").value
-    let atividade = "Pecuária";
-    let porte = document.getElementById("Porte").value
-    let propriedade = document.getElementById("areaProp").value
-    let areaAtividade = document.getElementById("areaAtvd").value
-    let endereco = document.getElementById("Endereço").value
-    const verificar = (areaAtividade,propriedade) => {"console"}
-   
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-    const respostaDoc =document.querySelector('input[name="OpcDoc"]:checked')?.value || "";
-    const OpcDoc = buscarTexto("OpcDoc", respostaDoc);
-    const respostaCar =document.querySelector('input[name="OpcCar"]:checked')?.value || "";
-    const OpcCar = buscarTexto("OpcCar", respostaCar);
-    const respostaArt =document.querySelector('input[name="OpcArt"]:checked')?.value || "";
-    const OpcArt = buscarTexto("OpcArt", respostaArt);
-    const respostaAgua =document.querySelector('input[name="OpcAgua"]:checked')?.value || "";
-    const OpcAgua = buscarTexto("OpcAgua", respostaAgua);
-    const respostaApoio =document.querySelector('input[name="OpcApoio"]:checked')?.value || "";
-    const OpcApoio = buscarTexto("OpcApoio", respostaApoio);
-    const respostaSpr =document.querySelector('input[name="OpcSpr"]:checked')?.value || "";
-    const OpcSpr = buscarTexto("OpcSpr", respostaSpr);
-    const respostaInfr =document.querySelector('input[name="OpcInfr"]:checked')?.value || "";
-    const OpcInfr = buscarTexto("OpcInfr", respostaInfr);
-    const respostaResi =document.querySelector('input[name="OpcResi"]:checked')?.value || "";
-    const OpcResi = buscarTexto("OpcResi", respostaResi);
-    const respostaCons =document.querySelector('input[name="OpcCons"]:checked')?.value || "";
-    const OpcCons = buscarTexto("OpcCons", respostaCons);
-    const respostaAna =document.querySelector('input[name="OpcAna"]:checked')?.value || "";
-    const OpcAna = buscarTexto("OpcAna", respostaAna);
+  const salvarInput = (id) => {
+    const valor = document.getElementById(id).value;
+    localStorage.setItem(id, valor);
+  };
 
-    
-    
-    salvar("codigoProcesso", cod); //setta os valores
-    salvar("nomeRequerente", nome);
-    salvar("nomeMunicipio", municipio + " - TO ");
-    salvar("requerimento", requerimento);
-    salvar("ato", ato);
-    salvar("atividade", atividade);
-    salvar("porte", porte);
-    salvar("Prop", propriedade);
-    salvar("areaAtvd", areaAtividade);
-    salvar("Endereço", endereco)
-    salvar("OpcDoc", OpcDoc)
-    salvar("OpcCar", OpcCar)
-    salvar("OpcArt", OpcArt)
-    salvar("OpcAgua", OpcAgua)
-    salvar("OpcApoio", OpcApoio)
-    salvar("OpcSpr", OpcSpr)
-    salvar("OpcInfr", OpcInfr)
-    salvar("OpcResi", OpcResi)
-    salvar("OpcCons", OpcCons)
-    salvar("OpcAna", OpcAna)
+  const salvarBox = (nome) => {
+    const resposta =
+      document.querySelector(`input[name="${nome}"]:checked`)?.value || "";
 
+    const valor = buscarTexto(nome, resposta);
+    localStorage.setItem(nome, valor);
+  };
 
+  const inputs = [
+    "cod_processo",
+    "nome_requerente",
+    "municipio",
+    "requerimento",
+    "Ato",
+    "Porte",
+    "areaProp",
+    "areaAtvd",
+    "Endereço"
+  ];
 
-    const checkboxes = document.getElementsByName("grupo")
+  const radios = [
+    "OpcDoc",
+    "OpcCar",
+    "OpcArt",
+    "OpcAgua",
+    "OpcApoio",
+    "OpcSpr",
+    "OpcInfr",
+    "OpcResi",
+    "OpcCons",
+    "OpcAna"
+  ];
 
-    window.location.href = "documento.html"; //redireciona pra proxima pagina
+  inputs.forEach(salvarInput);
+  radios.forEach(salvarBox);
+
+  localStorage.setItem("atividade", "Pecuária");
+
+  window.location.href = "documento.html";
 });
-
 function monitoramento(nome, just, alvo) {
     const op = document.querySelectorAll(`input[name="${nome}"]`);
     const justificativa = document.getElementById(just);
@@ -178,13 +158,15 @@ function monitoramento(nome, just, alvo) {
 monitoramento("OpcDoc", "justificativaDocs", "Nao");
 monitoramento("exemplos", "justify", "outros")
 
-propriedade.addEventListener("input", function(event){
-    const atvElement = document.getElementById("areaAtvd");
-    const atv = parseFloat(atvElement.value);
-    const prop = parseFloat(propriedade.value);
-    atvElement.max = prop;
-    if (atv > prop){
-        atvElement.value = 0;
-        throw new Error("Valor da area de atividade maior que a area de propriedade");
-    };
+propriedade.addEventListener("input", function (event) {
+  const atvElement = document.getElementById("areaAtvd");
+  const atv = parseFloat(atvElement.value);
+  const prop = parseFloat(propriedade.value);
+  atvElement.max = prop;
+  if (atv > prop) {
+    atvElement.value = 0;
+    throw new Error(
+      "Valor da area de atividade maior que a area de propriedade",
+    );
+  }
 });
