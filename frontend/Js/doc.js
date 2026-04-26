@@ -1,13 +1,13 @@
-let cod = localStorage.getItem("codigoProcesso");
-let nome = localStorage.getItem("nomeRequerente");
+let cod = localStorage.getItem("cod_processo");
+let nome = localStorage.getItem("nome_requerente");
 let req = localStorage.getItem("requerimento")
-let ato = localStorage.getItem("ato")
+let ato = localStorage.getItem("Ato")
 let atvd = localStorage.getItem("atividade")
-let porte = localStorage.getItem("porte")
-let areaProp = localStorage.getItem("Prop")
+let porte = localStorage.getItem("Porte")
+let areaProp = localStorage.getItem("areaProp")
 let areaAtvd = localStorage.getItem("areaAtvd")
-let cid = localStorage.getItem("nomeMunicipio")
-let endereco = localStorage.getItem("Endereço")
+let cid = localStorage.getItem("municipio")
+let endereco = localStorage.getItem("Endereco")
 let OpcDoc = localStorage.getItem("OpcDoc")
 let OpcCar = localStorage.getItem("OpcCar")
 let OpcArt = localStorage.getItem("OpcArt")
@@ -19,8 +19,8 @@ let OpcResi = localStorage.getItem("OpcResi")
 let OpcCons = localStorage.getItem("OpcCons")
 let OpcAna = localStorage.getItem("OpcAna")
 
+console.log(nome)
 
-console.log(OpcCar)
 
 const mostrar = (id, valor) => { //função pra pegar todos os elementos que vai ter o id ali, e substituir o texto por valor, e a lista retornar 0 no lugar ele coloca ??
     const elementos = document.querySelectorAll(`[data-campo='${id}']`);

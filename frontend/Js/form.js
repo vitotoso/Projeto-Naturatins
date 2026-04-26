@@ -88,6 +88,7 @@ document.querySelectorAll(".grupo").forEach(function (campo) {
 form.addEventListener("submit", function (event) { 
   event.preventDefault(); 
 
+
   const salvarInput = (id) => {
     const valor = document.getElementById(id).value;
     localStorage.setItem(id, valor);
@@ -108,7 +109,7 @@ form.addEventListener("submit", function (event) {
         "Porte",
         "areaProp",
         "areaAtvd",
-        "Endereço"
+        "Endereco"
     ];
 
     const radios = [
@@ -130,9 +131,12 @@ form.addEventListener("submit", function (event) {
   radios.forEach(salvarBox)
 
   const checkboxes = document.getElementsByName("grupo");
-
   window.location.href = "documento.html"; 
+
 }); 
+
+
+
 
 function monitoramento(nome, just, alvo) {
   const op = document.querySelectorAll(`input[name="${nome}"]`);
