@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
-    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/style.css" />
   </head>
   <body>
     <div class="conteudo">
@@ -15,128 +15,139 @@
             <img src="../assets/images/1-1024x1024.png" width="200px" />
           </div>
         </div>
-        <div class="grupo">
-          <label for="campo1">Codigo do Processo</label>
-          <input
-            type="text"
-            id="cod_processo"
-            name="campo1"
-            placeholder="Insira o codigo do processo aqui"
-            autocomplete="off"
-          />
-        </div>
-        <div class="grupo">
-          <label for="campo1">Numero do CAR</label>
-          <input
-            type="text"
-            id="cod_car"
-            name="inp_car"
-            placeholder="Insira o numero do CAR"
-            autocomplete="off"
-          />
-        </div>
+        <div class="inputs">
+          <div class="grupo">
+            <label for="campo1">Codigo do Processo</label>
+            <input
+              type="text"
+              id="cod_processo"
+              name="campo1"
+              placeholder="Insira o codigo do processo aqui"
+              autocomplete="off"
+            />
+          </div>
+          <div class="grupo">
+            <label for="campo1">Numero do CAR</label>
+            <input
+              type="text"
+              id="cod_car"
+              name="inp_car"
+              placeholder="Insira o numero do CAR"
+              autocomplete="off"
+            />
+          </div>
 
-        <div class="grupo">
-          <label for="campo2">Requerimento: </label>
-          <input
-            type="text"
-            id="requerimento"
-            name="campo2"
-            placeholder="Insira o requerimento aqui"
-            autocomplete="off"
-          />
-        </div>
+          <div class="grupo">
+            <label for="campo2">Requerimento: </label>
+            <input
+              type="text"
+              id="requerimento"
+              name="campo2"
+              placeholder="Insira o requerimento aqui"
+              autocomplete="off"
+            />
+          </div>
+          <div class="grupo">
+          <label for="resp_tec">Nome do Responsável Técnico: </label>
+            <input
+              type="text"
+              id="RespTec"
+              name="resp_tec"
+              placeholder="Insira o nome aqui"
+              autocomplete="on"
+            />
+          </div>
 
-        <div class="grupo">
-          <label for="campo3">Nome do Requerente</label>
-          <input
-            type="text"
-            id="nome_requerente"
-            name="campo3"
-            placeholder="Insira o nome do Requerente"
-            autocomplete="off"
-            autocapitalize="on"
-          />
-        </div>
-        <div class="grupo">
-          <label for="campo4">Ato administrativo:</label>
-          <input
-            type="text"
-            id="Ato"
-            name="campo4"
-            autocomplete="off"
-            autocapitalize="on"
-          />
-        </div>
-        <div class="grupo">
-          <label for="campo5">Endereço da Propriedade:</label>
-          <input
-            type="text"
-            id="Endereco"
-            name="campo5"
-            autocomplete="off"
-            autocapitalize="on"
-          />
-        </div>
-        <div class="grupo">
-          <label for="dataChegada">Data de chegada do processo:</label>
-          <input
-            type="text"
-            id="dataChegada"
-            name="campo6"
-            placeholder="dd/mm/aaaa"
-            maxlength="10"
-            autocomplete="off"
-          />
-        </div>
-        <div class="grupo">
-          <label for="select1">Porte</label>
-          <select id="Porte" name="select1">
-            <option value="Pequeno">Pequeno</option>
-            <option value="Médio">Médio</option>
-            <option value="Grande">Grande</option>
-          </select>
-        </div>
-        <div class="grupo">
-          <label for="campo2">Área da Propriedade:</label>
-          <input
-            type="number"
-            id="areaProp"
-            min="1"
-            step="0.01"
-            name="campo2"
-            autocomplete="off"
-            autocapitalize="on"
-          />
-        </div>
-        <div class="grupo">
-          <label for="campo2">Área da Atividade:</label>
-          <input
-            type="number"
-            id="areaAtvd"
-            min="1"
-            step="0.01"
-            name="campo2"
-            autocomplete="off"
-            autocapitalize="on"
-          />
-        </div>
-        <!-- <div class="grupo"> select para estádo
+          <div class="grupo">
+            <label for="campo3">Nome do Requerente</label>
+            <input
+              type="text"
+              id="nome_requerente"
+              name="campo3"
+              placeholder="Insira o nome do Requerente"
+              autocomplete="off"
+              autocapitalize="on"
+            />
+          </div>
+          <div class="grupo">
+            <label for="campo4">Ato administrativo:</label>
+            <input
+              type="text"
+              id="Ato"
+              name="campo4"
+              autocomplete="off"
+              autocapitalize="on"
+            />
+          </div>
+          <div class="grupo">
+            <label for="campo5">Endereço da Propriedade:</label>
+            <input
+              type="text"
+              id="Endereco"
+              name="campo5"
+              autocomplete="off"
+              autocapitalize="on"
+            />
+          </div>
+          <div class="grupo">
+            <label for="dataChegada">Data de chegada do processo:</label>
+            <input
+              type="text"
+              id="dataChegada"
+              name="campo6"
+              placeholder="dd/mm/aaaa"
+              maxlength="10"
+              autocomplete="off"
+            />
+          </div>
+          <div class="grupo">
+            <label for="select1">Porte</label>
+            <select id="Porte" name="select1">
+              <option value="Pequeno">Pequeno</option>
+              <option value="Médio">Médio</option>
+              <option value="Grande">Grande</option>
+            </select>
+          </div>
+          <div class="grupo">
+            <label for="campo2">Área da Propriedade:</label>
+            <input
+              type="number"
+              id="areaProp"
+              min="1"
+              step="0.01"
+              name="campo2"
+              autocomplete="off"
+              autocapitalize="on"
+            />
+          </div>
+          <div class="grupo">
+            <label for="campo2">Área da Atividade:</label>
+            <input
+              type="number"
+              id="areaAtvd"
+              min="1"
+              step="0.01"
+              name="campo2"
+              autocomplete="off"
+              autocapitalize="on"
+            />
+          </div>
+          <!-- <div class="grupo"> select para estádo
             <label for="select1">Estado:</label>
             <select id="estado" name="select1"> 
             </select>
         </div>         -->
-        <div class="grupo">
-          <label for="cidade">Cidade</label>
-          <input
-            type="text"
-            id="municipio"
-            list="lista-cidades"
-            placeholder="Digite a cidade"
-          />
-          <datalist id="lista-cidades"></datalist>
+          <div class="grupo">
+            <label for="cidade">Cidade</label>
+            <input
+              type="text"
+              id="municipio"
+              list="lista-cidades"
+              placeholder="Digite a cidade"
+            />
+            <datalist id="lista-cidades"></datalist>
+          </div>
         </div>
-
         <div class="grupo">
           <h4>Todos os documentos obrigatórios foram apresentados?</h4>
           <input type="radio" name="OpcDoc" class="radio" value="Sim" />
@@ -271,19 +282,9 @@
         <div class="grupo">
           <h4>Qual o resultado da análise?</h4>
 
-          <input 
-            type="radio" 
-            name="OpcAna" 
-            class="radio" 
-            value="Sim" 
-            />
+          <input type="radio" name="OpcAna" class="radio" value="Sim" />
           <label for="OpcAna">Favorável</label>
-          <input
-            type="radio"
-            name="OpcAna"
-            class="radio"
-            value="Nao"
-          />
+          <input type="radio" name="OpcAna" class="radio" value="Nao" />
           <label for="OpcAna">Desfavorável</label>
         </div>
         <div class="grupo">
