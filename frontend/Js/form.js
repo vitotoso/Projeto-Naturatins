@@ -102,6 +102,7 @@ form.addEventListener("submit", function (event) {
   };
     const inputs = [
         "cod_processo",
+        "cod_car",
         "nome_requerente",
         "municipio",
         "requerimento",
@@ -109,7 +110,8 @@ form.addEventListener("submit", function (event) {
         "Porte",
         "areaProp",
         "areaAtvd",
-        "Endereco"
+        "Endereco",
+        "dataChegada"
     ];
 
     const radios = [
@@ -172,4 +174,20 @@ propriedade.addEventListener("input", function (event) {
       "Valor da area de atividade maior que a area de propriedade",
     );
   }
+});
+
+const campoData = document.getElementById("dataChegada");
+
+campoData.addEventListener("input", (e) => {
+  let valor = e.target.value.replace(/\D/g, "");
+
+  if (valor.length > 2) {
+    valor = valor.replace(/^(\d{2})(\d)/, "$1/$2");
+  }
+
+  if (valor.length > 5) {
+    valor = valor.replace(/^(\d{2})\/(\d{2})(\d)/, "$1/$2/$3");
+  }
+
+  e.target.value = valor;
 });

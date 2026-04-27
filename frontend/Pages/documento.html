@@ -36,6 +36,10 @@
           <span class="dado-valor" data-campo="cod"></span>
         </div>
         <div class="dado-row">
+          <span class="dado-label">CAR:</span>
+          <span class="dado-valor" data-campo="car"></span>
+        </div>
+        <div class="dado-row">
           <span class="dado-label">Requerimento:</span>
           <span class="dado-valor" data-campo="req"></span>
         </div>
@@ -100,9 +104,6 @@
           <span data-campo="OpcCons"></span>
         </p>
         <p class="texto-corpo">
-          <span data-campo="OpcAna"></span>
-        </p>
-        <p class="texto-corpo">
           Esta análise foi subsidiada pelos parâmetros elencados no Termo de
           Referência para elaboração do Projeto Ambiental –
           <span data-campo="atvd"></span> na Resolução COEMA n° 07/2005
@@ -110,8 +111,8 @@
           ao Licenciamento Ambiental para Empreendimentos do Grupo agropecuário   .
         </p>
         <p class="texto-corpo">
-          Conforme requerimento, a data de entrada do referido processo foi em
-          [DATA DE ENTRADA], onde foram apresentados os documentos listados:
+          Conforme requerimento, a data de entrada do referido processo foi em 
+          <span data-campo="dataChegada"></span>, onde foram apresentados os documentos listados:
         </p>
         <ul class="lista">
           <li>Cópia dos documentos pessoais e comprovante de endereço;</li>
@@ -230,7 +231,7 @@
         <div class="secao-titulo">Conclusão</div>
         <p class="texto-corpo">
           <strong>Parecer:</strong> Diante do exposto, manifesta-se de forma
-          <strong>[FAVORÁVEL / DESFAVORÁVEL]</strong> à emissão da Licença
+          <span data-campo="OpcAna"></span> à emissão da Licença
           pleiteada para a atividade.
         </p>
       </section>
