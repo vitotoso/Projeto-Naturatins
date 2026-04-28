@@ -85,8 +85,8 @@ document.querySelectorAll(".grupo").forEach(function (campo) {
   });
 });
 
-form.addEventListener("submit", function (event) { 
-  event.preventDefault(); 
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
   const salvarInput = (id) => {
     const valor = document.getElementById(id).value;
@@ -99,40 +99,42 @@ form.addEventListener("submit", function (event) {
     const valor = buscarTexto(nome, resposta);
     localStorage.setItem(nome, valor);
   };
-    const inputs = [
-        "cod_processo",
-        "nome_requerente",
-        "municipio",
-        "requerimento",
-        "Ato",
-        "Porte",
-        "areaProp",
-        "areaAtvd",
-        "Endereço"
-    ];
+  const inputs = [
+    "cod_processo",
+    "cod_car",
+    "nome_requerente",
+    "municipio",
+    "requerimento",
+    "Ato",
+    "Porte",
+    "areaProp",
+    "areaAtvd",
+    "Endereco",
+    "dataChegada",
+    "Obs",
+    "Cond",
+  ];
 
-    const radios = [
-        "OpcDoc",
-        "OpcCar",
-        "OpcArt",
-        "OpcAgua",
-        "OpcApoio",
-        "OpcSpr",
-        "OpcInfr",
-        "OpcResi",
-        "OpcCons",
-        "OpcAna"
-    ];
-
+  const radios = [
+    "OpcDoc",
+    "OpcCar",
+    "OpcArt",
+    "OpcAgua",
+    "OpcApoio",
+    "OpcSpr",
+    "OpcInfr",
+    "OpcResi",
+    "OpcCons",
+    "OpcAna",
+  ];
 
   localStorage.setItem("atividade", "Pecuária");
-  inputs.forEach(salvarInput)
-  radios.forEach(salvarBox)
+  inputs.forEach(salvarInput);
+  radios.forEach(salvarBox);
 
   const checkboxes = document.getElementsByName("grupo");
-
-  window.location.href = "documento.html"; 
-}); 
+  window.location.href = "documento.html";
+});
 
 function monitoramento(nome, just, alvo) {
   const op = document.querySelectorAll(`input[name="${nome}"]`);
@@ -168,4 +170,20 @@ propriedade.addEventListener("input", function (event) {
       "Valor da area de atividade maior que a area de propriedade",
     );
   }
+});
+
+const campoData = document.getElementById("dataChegada");
+
+campoData.addEventListener("input", (e) => {
+  let valor = e.target.value.replace(/\D/g, "");
+
+  if (valor.length > 2) {
+    valor = valor.replace(/^(\d{2})(\d)/, "$1/$2");
+  }
+
+  if (valor.length > 5) {
+    valor = valor.replace(/^(\d{2})\/(\d{2})(\d)/, "$1/$2/$3");
+  }
+
+  e.target.value = valor;
 });

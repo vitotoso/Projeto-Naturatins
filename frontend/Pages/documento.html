@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parecer Técnico - NATURATINS</title>
-    <link rel="stylesheet" href="/frontend/Css/documento.css">
+    <link rel="stylesheet" href="../Css/documento.css" />
   </head>
   <body>
-
     <a href="formulario.html">Voltar</a>
     <div class="page">
       <!-- CABEÇALHO -->
       <div class="cabecalho">
         <div class="logo-area">
-          <div class="logo-box"><img src="/frontend/assets/images/1-1024x1024.png" width="200px"></div>
-          <div class="logo-box"><img src="/frontend/assets/images/Tocantins-Governo-do-Estado (1).png"> </div>
+          <div class="logo-box">
+            <img src="../assets/images/1-1024x1024.png" width="200px" />
+          </div>
+          <div class="logo-box">
+            <img src="../assets/images/Tocantins-Governo-do-Estado (1).png" />
+          </div>
         </div>
         <div class="cabecalho-texto">
           302 Norte, Alameda 01, Lote 03 – Plano Diretor Norte – Palmas/TO<br />
@@ -34,6 +37,10 @@
         <div class="dado-row">
           <span class="dado-label">Processo:</span>
           <span class="dado-valor" data-campo="cod"></span>
+        </div>
+        <div class="dado-row">
+          <span class="dado-label">CAR:</span>
+          <span class="dado-valor" data-campo="car"></span>
         </div>
         <div class="dado-row">
           <span class="dado-label">Requerimento:</span>
@@ -83,9 +90,9 @@
           <span data-campo="cid"></span>.
         </p>
         <p class="texto-corpo">
-        <span data-campo="OpcDoc"></span>
-        <span data-campo="OpcCar"></span>
-        <span data-campo="OpcArt"></span>
+          <span data-campo="OpcDoc"></span>
+          <span data-campo="OpcCar"></span>
+          <span data-campo="OpcArt"></span>
         </p>
         <p class="texto-corpo">
           <span data-campo="OpcAgua"></span>
@@ -100,18 +107,17 @@
           <span data-campo="OpcCons"></span>
         </p>
         <p class="texto-corpo">
-          <span data-campo="OpcAna"></span>
-        </p>
-        <p class="texto-corpo">
           Esta análise foi subsidiada pelos parâmetros elencados no Termo de
           Referência para elaboração do Projeto Ambiental –
-          <span data-campo="atvd"></span> na Resolução COEMA n° 07/2005
-          para empreendimento de agropecuário e na Relação de Documentos Necessários
-          ao Licenciamento Ambiental para Empreendimentos do Grupo agropecuário   .
+          <span data-campo="atvd"></span> na Resolução COEMA n° 07/2005 para
+          empreendimento de agropecuário e na Relação de Documentos Necessários
+          ao Licenciamento Ambiental para Empreendimentos do Grupo agropecuário
+          .
         </p>
         <p class="texto-corpo">
           Conforme requerimento, a data de entrada do referido processo foi em
-          [DATA DE ENTRADA], onde foram apresentados os documentos listados:
+          <span data-campo="dataChegada"></span>, onde foram apresentados os
+          documentos listados:
         </p>
         <ul class="lista">
           <li>Cópia dos documentos pessoais e comprovante de endereço;</li>
@@ -210,28 +216,24 @@
       <!-- OBSERVAÇÕES -->
       <section>
         <div class="secao-titulo">Observações</div>
-        <p class="texto-corpo">[INSERIR OBSERVAÇÕES OU DEIXAR EM BRANCO]</p>
+        <p class="texto-corpo"><span data-campo="Obs"></span></p>
       </section>
 
       <!-- CONDICIONANTES -->
       <section>
         <div class="secao-titulo">Condicionantes</div>
-        <ol class="lista">
-          <li>[INSERIR CONDICIONANTE 01];</li>
-          <li>[INSERIR CONDICIONANTE 02].</li>
-        </ol>
+        <p class="texto-corpo"><span data-campo="Cond"></span></p>
       </section>
 
       <!-- RECOMENDAÇÕES -->
-      
 
       <!-- CONCLUSÃO -->
       <section>
         <div class="secao-titulo">Conclusão</div>
         <p class="texto-corpo">
           <strong>Parecer:</strong> Diante do exposto, manifesta-se de forma
-          <strong>[FAVORÁVEL / DESFAVORÁVEL]</strong> à emissão da Licença
-          pleiteada para a atividade.
+          <span data-campo="OpcAna"></span> à emissão da Licença pleiteada para
+          a atividade.
         </p>
       </section>
 
@@ -245,7 +247,13 @@
     <div>
       <button id="impressao" class="buttonImpress">Imprima</button>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- Biblioteca -->
-    <script src="/frontend/Js/doc.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Biblioteca -->
+    <script src="../Js/doc.js"></script>
   </body>
 </html>
