@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
-    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/style.css" />
   </head>
+
   <body>
     <div class="conteudo">
       <form action="documento.html" method="get" autocomplete="off">
@@ -257,7 +258,6 @@
 
         <div class="grupo">
           <h4>Está em Unidade de Conservação?</h4>
-
           <input type="radio" name="OpcCons" class="radio" value="Sim" />
           <label for="OpcCons">Sim</label>
 
@@ -271,26 +271,34 @@
         <div class="grupo">
           <h4>Qual o resultado da análise?</h4>
 
-          <input 
-            type="radio" 
-            name="OpcAna" 
-            class="radio" 
-            value="Sim" 
-            />
+          <input type="radio" name="OpcAna" class="radio" value="Sim" />
           <label for="OpcAna">Favorável</label>
-          <input
-            type="radio"
-            name="OpcAna"
-            class="radio"
-            value="Nao"
-          />
+          <input type="radio" name="OpcAna" class="radio" value="Nao" />
           <label for="OpcAna">Desfavorável</label>
         </div>
+        <div class="grupo">
+          <label for="obs">Observação</label>
+          <textarea
+            id="Obs"
+            name="obs"
+            maxlength="500"
+            placeholder="Digite sua Observação"
+          ></textarea>
+        </div>
+        <div class="grupo">
+          <label for="cond">Condicionante</label>
+          <textarea
+            id="Cond"
+            name="cond"
+            maxlength="500"
+            placeholder="Digite seu Condicionante"
+          ></textarea>
+        </div>
+
         <div class="grupo">
           <button type="submit" id="btnCadastrar" name="btnCadastrar">
             Cadastrar
           </button>
-
           <button type="reset" id="btnLimpar">Limpar</button>
         </div>
       </form>
