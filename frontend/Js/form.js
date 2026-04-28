@@ -113,6 +113,7 @@ form.addEventListener("submit", function (event) {
     "dataChegada",
     "Obs",
     "Cond",
+    "RespTec",
   ];
 
   const radios = [

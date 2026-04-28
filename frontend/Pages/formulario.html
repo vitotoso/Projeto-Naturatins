@@ -49,13 +49,14 @@
             />
           </div>
           <div class="grupo">
-          <label for="resp_tec">Nome do Responsável Técnico: </label>
+            <label for="campo4">Ato administrativo:</label>
             <input
               type="text"
-              id="RespTec"
-              name="resp_tec"
-              placeholder="Insira o nome aqui"
-              autocomplete="on"
+              id="Ato"
+              name="campo4"
+              autocomplete="off"
+              autocapitalize="on"
+              placeholder="Digite o Ato administrativo aqui"
             />
           </div>
 
@@ -65,9 +66,19 @@
               type="text"
               id="nome_requerente"
               name="campo3"
-              placeholder="Insira o nome do Requerente"
+              placeholder="Insira o nome do Requerente aqui"
               autocomplete="off"
               autocapitalize="on"
+            />
+          </div>
+          <div class="grupo">
+            <label for="resp_tec">Nome do Responsável Técnico: </label>
+            <input
+              type="text"
+              id="RespTec"
+              name="resp_tec"
+              placeholder="Insira o nome aqui"
+              autocomplete="on"
             />
           </div>
           <div class="grupo">
@@ -78,6 +89,7 @@
               name="campo4"
               autocomplete="off"
               autocapitalize="on"
+              placeholder="Digite o Ato administrativo aqui"
             />
           </div>
           <div class="grupo">
@@ -88,6 +100,7 @@
               name="campo5"
               autocomplete="off"
               autocapitalize="on"
+              placeholder="Digite o Endereçoda Propriedade aqui"
             />
           </div>
           <div class="grupo">
@@ -119,6 +132,7 @@
               name="campo2"
               autocomplete="off"
               autocapitalize="on"
+              placeholder="Digite a Área da Propriedade aqui"
             />
           </div>
           <div class="grupo">
@@ -131,6 +145,7 @@
               name="campo2"
               autocomplete="off"
               autocapitalize="on"
+              placeholder="Digite a Área da Atividade aqui"
             />
           </div>
           <!-- <div class="grupo"> select para estádo
@@ -140,12 +155,7 @@
         </div>         -->
           <div class="grupo">
             <label for="cidade">Cidade</label>
-            <input
-              type="text"
-              id="municipio"
-              list="lista-cidades"
-              placeholder="Digite a cidade"
-            />
+            <input type="text" id="municipio" list="lista-cidades" />
             <datalist id="lista-cidades"></datalist>
           </div>
         </div>
@@ -295,6 +305,7 @@
             maxlength="500"
             placeholder="Digite sua Observação"
           ></textarea>
+          <p class="contador">0 / 500</p>
         </div>
         <div class="grupo">
           <label for="cond">Condicionante</label>
@@ -304,6 +315,7 @@
             maxlength="500"
             placeholder="Digite seu Condicionante"
           ></textarea>
+          <p class="contador">0 / 500</p>
         </div>
 
         <div class="grupo">
