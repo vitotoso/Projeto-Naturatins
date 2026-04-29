@@ -141,6 +141,7 @@ form.addEventListener("submit", function (event) {
 function monitoramento(nome, just, alvo) {
   const op = document.querySelectorAll(`input[name="${nome}"]`);
   const justificativa = document.getElementById(just);
+  console.log(op)
 
   if (!op.length || !justificativa) return;
 
@@ -158,7 +159,7 @@ function monitoramento(nome, just, alvo) {
   atualizar();
 }
 
-monitoramento("OpcDoc", "justificativaDocs", "Nao");
+monitoramento("opcDoc", "justificativaDocs", "Nao");
 monitoramento("exemplos", "justify", "outros");
 
 propriedade.addEventListener("input", function (event) {
