@@ -1,30 +1,33 @@
-let cod = localStorage.getItem("codProc");
-let car = localStorage.getItem("codCar");
-let nome = localStorage.getItem("nomeReq");
-let req = localStorage.getItem("requerimento");
-let ato = localStorage.getItem("ato");
-let atvd = localStorage.getItem("atividade");
-let porte = localStorage.getItem("porte");
-let areaProp = localStorage.getItem("areaProp");
-let areaAtvd = localStorage.getItem("areaAtvd");
-let cid = localStorage.getItem("municipio");
-let endereco = localStorage.getItem("endereco");
-let dataChegada = localStorage.getItem("dataChegada");
-let obs = localStorage.getItem("obs");
-let cond = localStorage.getItem("cond");
-let respTec = localStorage.getItem("respTec");
-let opcDoc = localStorage.getItem("opcDoc");
-let opcCar = localStorage.getItem("opcCar");
-let opcArt = localStorage.getItem("opcArt");
-let opcAgua = localStorage.getItem("opcAgua");
-let opcApoio = localStorage.getItem("opcApoio");
-let opcSpr = localStorage.getItem("opcSpr");
-let opcInfr = localStorage.getItem("opcInfr");
-let opcResi = localStorage.getItem("opcResi");
-let opcCons = localStorage.getItem("opcCons");
-let opcAna = localStorage.getItem("opcAna");
+const inputs = {
+  cod: "codProc",
+  car: "codCar",
+  nome: "nomeReq",
+  req: "requerimento",
+  ato: "ato",
+  atvd: "atividade",
+  porte: "porte",
+  areaProp: "areaProp",
+  areaAtvd: "areaAtvd",
+  cid: "municipio",
+  endereco: "endereco",
+  dataChegada: "dataChegada",
+  Obs: "obs",
+  Cond: "cond",
+  RespTec: "respTec",
+  OpcDoc: "opcDoc",
+  OpcCar: "opcCar",
+  OpcArt: "opcArt",
+  OpcAgua: "opcAgua",
+  OpcApoio: "opcApoio",
+  OpcSpr: "opcSpr",
+  OpcInfr: "opcInfr",
+  OpcResi: "opcResi",
+  OpcCons: "opcCons",
+  OpcAna: "opcAna"
+};
 
-console.log(car);
+
+
 
 const mostrar = (id, valor) => {
   //função pra pegar todos os elementos que vai ter o id ali, e substituir o texto por valor, e a lista retornar 0 no lugar ele coloca ??
@@ -36,32 +39,17 @@ const mostrar = (id, valor) => {
     elemento.textContent = valor ?? "";
   });
 };
+const comHa = ["areaProp", "areaAtvd"];
 
-mostrar("cod", cod);
-mostrar("car", car);
-mostrar("req", req);
-mostrar("nome", nome);
-mostrar("ato", ato);
-mostrar("porte", porte);
-mostrar("atvd", atvd);
-mostrar("areaProp", areaProp);
-mostrar("areaAtvd", areaAtvd);
-mostrar("cid", cid);
-mostrar("endereco", endereco);
-mostrar("dataChegada", dataChegada);
-mostrar("Obs", obs);
-mostrar("RespTec", respTec);
-mostrar("Cond", cond);
-mostrar("OpcDoc", opcDoc);
-mostrar("OpcCar", opcCar);
-mostrar("OpcArt", opcArt);
-mostrar("OpcAgua", opcAgua);
-mostrar("OpcApoio", opcApoio);
-mostrar("OpcSpr", opcSpr);
-mostrar("OpcInfr", opcInfr);
-mostrar("OpcResi", opcResi);
-mostrar("OpcCons", opcCons);
-mostrar("OpcAna", opcAna);
+Object.entries(inputs).forEach(([campo, chave]) => {
+  let valor = localStorage.getItem(chave)
+
+  if (comHa.includes(chave)) {
+    valor = (valor ?? "") + " ha";
+  }
+  mostrar(campo, valor);
+});
+
 
 const data = () => {
   const hoje = new Date();
