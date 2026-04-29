@@ -179,7 +179,7 @@ section {
 span {
   font: bold;
 }
-.buttonImpress {
+.buttonSave {
   display: block;
   margin: 20px auto;
   padding: 10px 28px;
@@ -224,7 +224,7 @@ a:hover {
 
 /* IMPRESSÃO */
 @media print {
-   a, .buttonImpress {
+   a, .buttonSave {
     display: none; /* esconde os botões ao imprimir */
   } 
   body {
