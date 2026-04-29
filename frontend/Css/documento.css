@@ -17,7 +17,8 @@ body {
   color: var(--text-color);
   line-height: 1.5;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;    
   padding: 40px 0;
 }
 
@@ -178,9 +179,54 @@ section {
 span {
   font: bold;
 }
+.buttonImpress {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 28px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.acoes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 40px;
+}
+
+.buttonImpress:hover {
+  background-color: #1b5e20;
+}
+
+a {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+  padding: 8px 20px;
+  background-color: #525659;
+  color: white;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  background-color: #3a3d3f;
+}
+
 
 /* IMPRESSÃO */
 @media print {
+   a, .buttonImpress {
+    display: none; /* esconde os botões ao imprimir */
+  } 
   body {
     background: none;
     padding: 0;
