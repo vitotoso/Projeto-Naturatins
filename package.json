@@ -1,0 +1,26 @@
+{
+  "name": "naturatins",
+  "version": "1.0.0",
+  "description": "Sistema Interno Naturatins",
+
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+
+    "appId": "com.naturatins.app",
+    "productName": "Sistema Naturatins",
+    "artifactName": "Sistema-Naturatins-Setup.${ext}",
+    "win": {
+      "target": "nsis",
+      "icon": "Imagens/Logo-naturatins.ico"
+    }
+  }
+}
