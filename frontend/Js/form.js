@@ -17,43 +17,43 @@ function buscarTexto(tipo, resposta) {
 }
 
 const regras = {
-  OpcDoc: {
+  opcDoc: {
     Sim: "O empreendedor apresentou integralmente os documentos exigidos. ",
     Nao: "O empreendedor não apresentou integralmente os documentos exigidos, sendo necessária complementação. ",
   },
-  OpcCar: {
+  opcCar: {
     Sim: "O Cadastro Ambiental Rural encontra-se ativo e regular. ",
     Nao: "O Cadastro Ambiental Rural apresenta inconsistências, sendo necessária regularização. ",
   },
-  OpcArt: {
+  opcArt: {
     Sim: "A Anotação de Responsabilidade Técnica encontra-se regular. ",
     Nao: "A Anotação de Responsabilidade Técnica necessita regularização. ",
   },
-  OpcAgua: {
+  opcAgua: {
     Sim: "A atividade faz uso direto de recursos hídricos com autorização válida. ",
     Nao: "A atividade faz uso direto de recursos hídricos sem autorização, sendo necessária regularização. ",
   },
-  OpcApoio: {
+  opcApoio: {
     Sim: "Verifica-se uso de água para atividades de apoio, devendo ser regularizado. ",
     Nao: "Não há uso relevante de água para apoio. ",
   },
-  OpcSpr: {
+  opcSpr: {
     Sim: "O empreendimento prevê supressão de vegetação. ",
     Nao: "O empreendimento não prevê supressão de vegetação. ",
   },
-  OpcInfr: {
+  opcInfr: {
     Sim: "Foi verificada infraestrutura compatível. ",
     Nao: "Não foi verificada infraestrutura adequada.",
   },
-  OpcResi: {
+  opcResi: {
     Sim: "Os resíduos são gerenciados adequadamente. ",
     Nao: "Não há gestão adequada de resíduos. ",
   },
-  OpcCons: {
+  opcCons: {
     Sim: "O empreendimento encontra-se inserido em Unidade de Conservação. ",
     Nao: "O empreendimento não se encontra inserido em Unidade de Conservação. ",
   },
-  OpcAna: {
+  opcAna: {
     Sim: "Diante do exposto, opina-se de forma favorável à emissão da licença. ",
     Nao: "Diante do exposto, opina-se de forma desfavorável à emissão da licença. ",
   },
@@ -100,33 +100,34 @@ form.addEventListener("submit", function (event) {
     localStorage.setItem(nome, valor);
   };
   const inputs = [
-    "cod_processo",
-    "cod_car",
-    "nome_requerente",
+    "codProc",
+    "codCar",
+    "nomeReq",
     "municipio",
     "requerimento",
-    "Ato",
-    "Porte",
+    "ato",
+    "porte",
     "areaProp",
     "areaAtvd",
-    "Endereco",
+    "endereco",
     "dataChegada",
-    "Obs",
-    "Cond",
-    "RespTec",
+    "obs",
+    "cond",
+    "respTec",
+    "nomeProp"
   ];
 
   const radios = [
-    "OpcDoc",
-    "OpcCar",
-    "OpcArt",
-    "OpcAgua",
-    "OpcApoio",
-    "OpcSpr",
-    "OpcInfr",
-    "OpcResi",
-    "OpcCons",
-    "OpcAna",
+    "opcDoc",
+    "opcCar",
+    "opcArt",
+    "opcAgua",
+    "opcApoio",
+    "opcSpr",
+    "opcInfr",
+    "opcResi",
+    "opcCons",
+    "opcAna",
   ];
 
   localStorage.setItem("atividade", "Pecuária");
