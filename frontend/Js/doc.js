@@ -2,6 +2,7 @@ const inputs = {
   cod: "codProc",
   car: "codCar",
   nome: "nomeReq",
+  nomeProp: "nomeProp",
   req: "requerimento",
   ato: "ato",
   atvd: "atividade",
@@ -10,6 +11,8 @@ const inputs = {
   areaAtvd: "areaAtvd",
   cid: "municipio",
   endereco: "endereco",
+  lat: "lat",
+  long: "long",
   dataChegada: "dataChegada",
   Obs: "obs",
   Cond: "cond",
@@ -23,11 +26,8 @@ const inputs = {
   OpcInfr: "opcInfr",
   OpcResi: "opcResi",
   OpcCons: "opcCons",
-  OpcAna: "opcAna"
+  OpcAna: "opcAna",
 };
-
-
-
 
 const mostrar = (id, valor) => {
   //função pra pegar todos os elementos que vai ter o id ali, e substituir o texto por valor, e a lista retornar 0 no lugar ele coloca ??
@@ -42,14 +42,13 @@ const mostrar = (id, valor) => {
 const comHa = ["areaProp", "areaAtvd"];
 
 Object.entries(inputs).forEach(([campo, chave]) => {
-  let valor = localStorage.getItem(chave)
+  let valor = localStorage.getItem(chave);
 
   if (comHa.includes(chave)) {
     valor = (valor ?? "") + " ha";
   }
   mostrar(campo, valor);
 });
-
 
 const data = () => {
   const hoje = new Date();

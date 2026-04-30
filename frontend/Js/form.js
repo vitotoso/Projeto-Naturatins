@@ -1,4 +1,5 @@
 const form = document.querySelector("form");
+console.log("teste");
 const propriedade = document.getElementById("areaProp");
 function buscarTexto(tipo, resposta) {
   if (!regras[tipo]) {
@@ -114,7 +115,9 @@ form.addEventListener("submit", function (event) {
     "obs",
     "cond",
     "respTec",
-    "nomeProp"
+    "nomeProp",
+    "lat",
+    "long",
   ];
 
   const radios = [
@@ -141,7 +144,7 @@ form.addEventListener("submit", function (event) {
 function monitoramento(nome, just, alvo) {
   const op = document.querySelectorAll(`input[name="${nome}"]`);
   const justificativa = document.getElementById(just);
-  console.log(op)
+  console.log(op);
 
   if (!op.length || !justificativa) return;
 
