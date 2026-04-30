@@ -63,7 +63,7 @@ const data = () => {
 let calendario = data();
 mostrar("calendario", calendario);
 
-const salvar = document.getElementBynpmId("Salvar");
+const salvar = document.getElementById("Salvar");
 
 salvar.addEventListener("click", () => {
   html2pdf().from(document.querySelector(".page")).save();
