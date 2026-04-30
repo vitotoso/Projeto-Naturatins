@@ -17,43 +17,43 @@ function buscarTexto(tipo, resposta) {
 }
 
 const regras = {
-  OpcDoc: {
+  opcDoc: {
     Sim: "O empreendedor apresentou integralmente os documentos exigidos. ",
     Nao: "O empreendedor não apresentou integralmente os documentos exigidos, sendo necessária complementação. ",
   },
-  OpcCar: {
+  opcCar: {
     Sim: "O Cadastro Ambiental Rural encontra-se ativo e regular. ",
     Nao: "O Cadastro Ambiental Rural apresenta inconsistências, sendo necessária regularização. ",
   },
-  OpcArt: {
+  opcArt: {
     Sim: "A Anotação de Responsabilidade Técnica encontra-se regular. ",
     Nao: "A Anotação de Responsabilidade Técnica necessita regularização. ",
   },
-  OpcAgua: {
+  opcAgua: {
     Sim: "A atividade faz uso direto de recursos hídricos com autorização válida. ",
     Nao: "A atividade faz uso direto de recursos hídricos sem autorização, sendo necessária regularização. ",
   },
-  OpcApoio: {
+  opcApoio: {
     Sim: "Verifica-se uso de água para atividades de apoio, devendo ser regularizado. ",
     Nao: "Não há uso relevante de água para apoio. ",
   },
-  OpcSpr: {
+  opcSpr: {
     Sim: "O empreendimento prevê supressão de vegetação. ",
     Nao: "O empreendimento não prevê supressão de vegetação. ",
   },
-  OpcInfr: {
+  opcInfr: {
     Sim: "Foi verificada infraestrutura compatível. ",
     Nao: "Não foi verificada infraestrutura adequada.",
   },
-  OpcResi: {
+  opcResi: {
     Sim: "Os resíduos são gerenciados adequadamente. ",
     Nao: "Não há gestão adequada de resíduos. ",
   },
-  OpcCons: {
+  opcCons: {
     Sim: "O empreendimento encontra-se inserido em Unidade de Conservação. ",
     Nao: "O empreendimento não se encontra inserido em Unidade de Conservação. ",
   },
-  OpcAna: {
+  opcAna: {
     Sim: "Diante do exposto, opina-se de forma favorável à emissão da licença. ",
     Nao: "Diante do exposto, opina-se de forma desfavorável à emissão da licença. ",
   },
@@ -85,8 +85,8 @@ document.querySelectorAll(".grupo").forEach(function (campo) {
   });
 });
 
-form.addEventListener("submit", function (event) { 
-  event.preventDefault(); 
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
   const salvarInput = (id) => {
     const valor = document.getElementById(id).value;
@@ -99,37 +99,49 @@ form.addEventListener("submit", function (event) {
     const valor = buscarTexto(nome, resposta);
     localStorage.setItem(nome, valor);
   };
-  salvarInput("cod_processo");
-  salvarInput("nome_requerente");
-  salvarInput("municipio");
-  salvarInput("requerimento");
-  salvarInput("Ato");
-  salvarInput("Porte");
-  salvarInput("areaProp");
-  salvarInput("areaAtvd");
-  salvarInput("Endereço");
+  const inputs = [
+    "codProc",
+    "codCar",
+    "nomeReq",
+    "municipio",
+    "requerimento",
+    "ato",
+    "porte",
+    "areaProp",
+    "areaAtvd",
+    "endereco",
+    "dataChegada",
+    "obs",
+    "cond",
+    "respTec",
+    "nomeProp"
+  ];
+
+  const radios = [
+    "opcDoc",
+    "opcCar",
+    "opcArt",
+    "opcAgua",
+    "opcApoio",
+    "opcSpr",
+    "opcInfr",
+    "opcResi",
+    "opcCons",
+    "opcAna",
+  ];
 
   localStorage.setItem("atividade", "Pecuária");
-
-  salvarBox("OpcDoc");
-  salvarBox("OpcCar");
-  salvarBox("OpcArt");
-  salvarBox("OpcAgua");
-  salvarBox("OpcApoio");
-  salvarBox("OpcSpr");
-  salvarBox("OpcInfr");
-  salvarBox("OpcResi");
-  salvarBox("OpcCons");
-  salvarBox("OpcAna");
+  inputs.forEach(salvarInput);
+  radios.forEach(salvarBox);
 
   const checkboxes = document.getElementsByName("grupo");
-
-  window.location.href = "documento.html"; 
-}); 
+  window.location.href = "documento.html";
+});
 
 function monitoramento(nome, just, alvo) {
   const op = document.querySelectorAll(`input[name="${nome}"]`);
   const justificativa = document.getElementById(just);
+  console.log(op)
 
   if (!op.length || !justificativa) return;
 
@@ -147,7 +159,7 @@ function monitoramento(nome, just, alvo) {
   atualizar();
 }
 
-monitoramento("OpcDoc", "justificativaDocs", "Nao");
+monitoramento("opcDoc", "justificativaDocs", "Nao");
 monitoramento("exemplos", "justify", "outros");
 
 propriedade.addEventListener("input", function (event) {
@@ -161,4 +173,20 @@ propriedade.addEventListener("input", function (event) {
       "Valor da area de atividade maior que a area de propriedade",
     );
   }
+});
+
+const campoData = document.getElementById("dataChegada");
+
+campoData.addEventListener("input", (e) => {
+  let valor = e.target.value.replace(/\D/g, "");
+
+  if (valor.length > 2) {
+    valor = valor.replace(/^(\d{2})(\d)/, "$1/$2");
+  }
+
+  if (valor.length > 5) {
+    valor = valor.replace(/^(\d{2})\/(\d{2})(\d)/, "$1/$2/$3");
+  }
+
+  e.target.value = valor;
 });
