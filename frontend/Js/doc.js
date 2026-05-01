@@ -65,5 +65,27 @@ mostrar("calendario", calendario);
 const imprimir = document.getElementById("impressao");
 
 imprimir.addEventListener("click", () => {
-  html2pdf().from(document.querySelector(".page")).save();
+  const elemento = document.querySelector(".page");
+
+  const opcoes = {
+    margin: [10, 0, 10, 0], // margem top, right, bottom, left (em mm)
+    filename: "documento.pdf",
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: {
+      scale: 2, // melhor resolução
+      useCORS: true, // evita erro com imagens externas
+      scrollY: 0,
+    },
+    jsPDF: {
+      unit: "mm",
+      format: "a4",
+      orientation: "portrait",
+    },
+    pageBreak: {
+      mode: ["css", "legacy"], // evita cortes dentro de elementos
+      before: ".secao-titulo",
+    },
+  };
+
+  html2pdf().set(opcoes).from(elemento).save();
 });

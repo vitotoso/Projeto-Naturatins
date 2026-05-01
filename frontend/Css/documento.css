@@ -82,8 +82,13 @@ body {
   margin-bottom: 14px;
 }
 
-/* SEÇÕES */
 .secao-titulo {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  page-break-before: auto;
+  break-before: auto;
+  display: block;
+  overflow: hidden;
   background-color: var(--header-gray);
   font-size: 11pt;
   font-weight: bold;
@@ -92,6 +97,12 @@ body {
   padding: 4px 8px;
   margin-bottom: 10px;
   border: 1px solid #bbb;
+}
+
+#obspage {
+  margin-top: 60px;
+  page-break-before: always;
+  break-before: page;
 }
 
 section {
