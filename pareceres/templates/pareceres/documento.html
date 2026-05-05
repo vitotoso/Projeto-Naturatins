@@ -1,22 +1,23 @@
+{% load static %}
 <!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parecer Técnico - NATURATINS</title>
-    <link rel="stylesheet" href="../../static/parecer/documento.css" />
+    <link rel="stylesheet" href="{% static 'pareceres/css/documento.css' %}" />
   </head>
   <body>
-    <a href="formulario.html">Voltar</a>
+    <a href="{% url 'pareceres:formulario' %}">Voltar</a>
     <div class="page">
       <!-- CABEÇALHO -->
       <div class="cabecalho">
         <div class="logo-area">
           <div class="logo-box">
-            <img src="../../../static/images/1-1024x1024.png" width="200px" />
+            <img src="{% static 'pareceres/images/1-1024x1024.png' %}" width="200px" />
           </div>
           <div class="logo-box">
-            <img src="../../../static/images/image.png" width="110px" />
+            <img src="{% static 'pareceres/images/Tocantins-Governo-do-Estado.png' %}" />
           </div>
         </div>
         <div class="cabecalho-texto">
@@ -124,8 +125,8 @@
           <li>Projeto Ambiental (PA);</li>
           <li>Comprovante de pagamento da taxa de licenciamento;</li>
           <li>
-            Anotação de Responsabilidade Técnica - ART Nº [NÚMERO ART], [NOME DO
-            RESPONSÁVEL TÉCNICO];
+            Anotação de Responsabilidade Técnica - ART Nº [NÚMERO ART],
+            <span data-campo="RespTec"></span>
           </li>
           <li>
             Cópia da publicação da solicitação da Licença Ambiental no Diário
@@ -146,16 +147,10 @@
           COEMA nº [NÚMERO/ANO] – Anexo I).
         </p>
 
-        <p class="pendencias-titulo">PENDÊNCIAS:</p>
-        <ol class="lista-pendencias">
-          <li>[DESCREVER PENDÊNCIA 01 OU REMOVER];</li>
-          <li>[DESCREVER PENDÊNCIA 02 OU REMOVER].</li>
-        </ol>
-
         <p class="texto-corpo">
           Todas as informações apresentadas são de responsabilidade do
-          responsável técnico, [NOME DO RESPONSÁVEL TÉCNICO], ART Nº [NÚMERO
-          ART].
+          responsável técnico, <span data-campo="RespTec"></span>, ART Nº
+          [NÚMERO ART].
         </p>
       </section>
 
@@ -165,12 +160,14 @@
           <strong>Informações do Projeto Ambiental</strong>
         </p>
         <p class="texto-corpo">
-          A propriedade [NOME DA PROPRIEDADE], matrícula [NÚMERO], está
-          localizada nas coordenadas geográficas: latitude [LAT] S e longitude
-          [LONG] O. Foi apresentado no estudo ambiental a solicitação do
-          licenciamento para atividade de <span data-campo="atvd"></span>, com
-          área total do projeto de <span data-campo="areaAtvd"></span>.
-          [DESCRIÇÃO COMPLEMENTAR DO PROJETO AMBIENTAL].
+          A propriedade <span data-campo="nomeProp"></span>, matrícula [NÚMERO],
+          está localizada nas coordenadas geográficas: latitude
+          <span data-campo="lat"></span>S e longitude
+          <span data-campo="long"></span> O. Foi apresentado no estudo ambiental
+          a solicitação do licenciamento para atividade de
+          <span data-campo="atvd"></span>, com área total do projeto de
+          <span data-campo="areaAtvd"></span>. [DESCRIÇÃO COMPLEMENTAR DO
+          PROJETO AMBIENTAL].
         </p>
         <p class="texto-corpo">
           [DESCRIÇÃO SOBRE RESÍDUOS, EFLUENTES E MEDIDAS MITIGADORAS].
@@ -214,9 +211,16 @@
       </section>
 
       <!-- OBSERVAÇÕES -->
+      <br />
+      <br />
       <section>
-        <div class="secao-titulo">Observações</div>
+        <div class="secao-titulo" id="obspg">Observações</div>
         <p class="texto-corpo"><span data-campo="Obs"></span></p>
+        <p class="pendencias-titulo">PENDÊNCIAS:</p>
+        <ol class="lista-pendencias">
+          <li>[DESCREVER PENDÊNCIA 01 OU REMOVER];</li>
+          <li>[DESCREVER PENDÊNCIA 02 OU REMOVER].</li>
+        </ol>
       </section>
 
       <!-- CONDICIONANTES -->
@@ -240,7 +244,7 @@
       <!-- ASSINATURA -->
       <div class="assinatura">
         <div class="linha-assinatura"></div>
-        <div class="assinatura-nome">[NOME DO TÉCNICO RESPONSÁVEL]</div>
+        <div class="assinatura-nome"><span data-campo="RespTec"></span></div>
         <div class="assinatura-cargo">[DEPARTAMENTO / ÓRGÃO]</div>
       </div>
     </div>
@@ -254,6 +258,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <!-- Biblioteca -->
-    <script src="../../static/parecer/doc.js"></script>
+    <script src="{% static 'pareceres/js/doc.js' %}"></script>
   </body>
 </html>
