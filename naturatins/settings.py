@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'parecer',
     'static',
-    'templates'
+    'templates',
+    'accounts'
 ]
 
 MIDDLEWARE = [
