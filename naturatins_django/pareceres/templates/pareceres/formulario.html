@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="../../static/pareceres/css/style.css" />
+  </head>
+
+  <body>
+    <div class="conteudo">
+      <form
+        action="../../static/pareceres/js/doc.js"
+        method="get"
+        autocomplete="new-password"
+      >
+        <!--TROCAR O GET NÂO E SEGURO PARA FORMULARIOS REAIS O GET QUE ESTÀ ATUAL E PARA FINALIDADES DE TESTE -->
+        <div class="logo-area">
+          <div class="logo-box">
+            <img
+              src="../../static/pareceres/images/LogoNaturatins.png"
+              width="200px"
+            />
+          </div>
+        </div>
+        <div class="inputs">
+          <div class="grupo">
+            <label for="inp_cod_processo">Codigo do Processo</label>
+            <input
+              type="text"
+              id="codProc"
+              name="inp_cod_processo"
+              placeholder="Insira o codigo do processo aqui"
+              autocomplete="new-password"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_car">Numero do CAR</label>
+            <input
+              type="text"
+              id="codCar"
+              name="inp_car"
+              placeholder="Insira o numero do CAR"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="grupo">
+            <label for="inp_req">Requerimento: </label>
+            <input
+              type="text"
+              id="requerimento"
+              name="inp_req"
+              placeholder="Insira o requerimento aqui"
+              autocomplete="new-password"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_ato">Ato administrativo:</label>
+            <input
+              type="text"
+              id="ato"
+              name="inp_ato"
+              autocomplete="new-password"
+              autocapitalize="on"
+              placeholder="Digite o Ato administrativo aqui"
+            />
+          </div>
+
+          <div class="grupo">
+            <label for="inp_nome_req">Nome do Requerente</label>
+            <input
+              type="text"
+              id="nomeReq"
+              name="inp_nome_req"
+              placeholder="Insira o nome do Requerente aqui"
+              autocomplete="new-password"
+              autocapitalize="on"
+            />
+          </div>
+          <div class="grupo">
+            <label for="nm_propriedade">Nome da Propriedade</label>
+            <input
+              type="text"
+              id="nomeProp"
+              name="nm_propriedade"
+              placeholder="Insira o nome do Requerente aqui"
+              autocomplete="new-password"
+              autocapitalize="on"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_resp_tec">Nome do Responsável Técnico: </label>
+            <input
+              type="text"
+              id="respTec"
+              name="inp_resp_tec"
+              placeholder="Insira o nome aqui"
+              autocomplete="on"
+              autocapitalize="on"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_end">Endereço da Propriedade:</label>
+            <input
+              type="text"
+              id="endereco"
+              name="inp_end"
+              autocomplete="new-password"
+              autocapitalize="on"
+              placeholder="Digite o Endereço da Propriedade aqui"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_end">Latitude:</label>
+            <input
+              type="text"
+              id="lat"
+              name="inp_lat"
+              autocomplete="new-password"
+              autocapitalize="on"
+              placeholder="Digite a Latitude"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_end">Longitude:</label>
+            <input
+              type="text"
+              id="long"
+              name="inp_long"
+              autocomplete="new-password"
+              autocapitalize="on"
+              placeholder="Digite a Longitude"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_data">Data de chegada do processo:</label>
+            <input
+              type="text"
+              id="dataChegada"
+              name="inp_data"
+              placeholder="dd/mm/aaaa"
+              maxlength="10"
+              autocomplete="new-password"
+            />
+          </div>
+          <div class="grupo">
+            <label for="select_porte">Porte</label>
+            <select id="porte" name="select_porte">
+              <option value="Pequeno">Pequeno</option>
+              <option value="Médio">Médio</option>
+              <option value="Grande">Grande</option>
+            </select>
+          </div>
+          <div class="grupo">
+            <label for="inp_area_prop">Área da Propriedade:</label>
+            <input
+              type="number"
+              id="areaProp"
+              min="1"
+              step="0.01"
+              name="inp_area_prop"
+              autocomplete="new-password"
+              autocapitalize="on"
+              placeholder="Digite a Área da Propriedade aqui"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_area_atvd">Área da Atividade:</label>
+            <input
+              type="number"
+              id="areaAtvd"
+              min="1"
+              step="0.01"
+              name="inp_area_atvd"
+              autocomplete="new-password"
+              autocapitalize="on"
+              placeholder="Digite a Área da Atividade aqui"
+            />
+          </div>
+
+          <div class="grupo">
+            <label for="cidade">Cidade</label>
+            <input
+              type="text"
+              id="municipio"
+              list="lista-cidades"
+              autocomplete="new-password"
+            />
+            <datalist id="lista-cidades"></datalist>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <h4>Todos os documentos obrigatórios foram apresentados?</h4>
+          <input type="radio" name="opcDoc" class="radio" value="Sim" />
+          <label for="OpcDoc" class="">Sim</label>
+          <input type="radio" name="opcDoc" class="radio" value="Nao" />
+          <label for="OpcDoc">Não</label>
+          <input type="radio" name="opcDoc" class="radio" value="NA" />
+          <label for="OpcDoc">Não se Aplica</label>
+        </div>
+        <div id="justificativaDocs" style="display: none" class="grupo">
+          <h4>Exemplos</h4>
+
+          <input type="radio" name="exemplos" class="radio" value="Ex1" />
+          <label for="exemplos">Exemplo 1</label>
+
+          <input type="radio" name="exemplos" class="radio" value="Ex2" />
+          <label for="exemplos">Exemplo 2</label>
+
+          <input type="radio" name="exemplos" class="radio" value="outros" />
+          <label for="exemplos">Outros</label>
+
+          <div id="justify" style="display: none">
+            <label>Justifique</label>
+            <textarea></textarea>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <h4>O CAR está ativo e regular?</h4>
+
+          <input type="radio" name="opcCar" class="radio" value="Sim" />
+          <label for="OpcCar">Sim</label>
+
+          <input type="radio" name="opcCar" class="radio" value="Nao" />
+          <label for="OpcCar">Não</label>
+
+          <input type="radio" name="opcCar" class="radio" value="NA" />
+          <label for="OpcCar">Não se Aplica</label>
+        </div>
+
+        <div class="grupo">
+          <h4>A ART está regular?</h4>
+
+          <input type="radio" name="opcArt" class="radio" value="Sim" />
+          <label for="OpcArt">Sim</label>
+
+          <input type="radio" name="opcArt" class="radio" value="Nao" />
+          <label for="OpcArt">Não</label>
+
+          <input type="radio" name="opcArt" class="radio" value="NA" />
+          <label for="OpcArt">Não se Aplica</label>
+        </div>
+
+        <div class="grupo">
+          <h4>A atividade utiliza água diretamente?</h4>
+
+          <input type="radio" name="opcAgua" class="radio" value="Sim" />
+          <label for="OpcAgua">Sim</label>
+
+          <input type="radio" name="opcAgua" class="radio" value="Nao" />
+          <label for="OpcAgua">Não</label>
+
+          <input type="radio" name="opcAgua" class="radio" value="NA" />
+          <label for="OpcAgua">Não se Aplica</label>
+        </div>
+
+        <div class="grupo">
+          <h4>Há uso de água para apoio?</h4>
+
+          <input type="radio" name="opcApoio" class="radio" value="Sim" />
+          <label for="OpcApoio">Sim</label>
+
+          <input type="radio" name="opcApoio" class="radio" value="Nao" />
+          <label for="OpcApoio">Não</label>
+
+          <input type="radio" name="opcApoio" class="radio" value="NA" />
+          <label for="OpcApoio">Não se Aplica</label>
+        </div>
+
+        <div class="grupo">
+          <h4>Há supressão vegetal?</h4>
+
+          <input type="radio" name="opcSpr" class="radio" value="Sim" />
+          <label for="OpcSpr">Sim</label>
+
+          <input type="radio" name="opcSpr" class="radio" value="Nao" />
+          <label for="OpcSpr">Não</label>
+
+          <input type="radio" name="opcSpr" class="radio" value="NA" />
+          <label for="OpcSpr">Não se Aplica</label>
+        </div>
+
+        <div class="grupo">
+          <h4>Há infraestrutura adequada?</h4>
+
+          <input type="radio" name="opcInfr" class="radio" value="Sim" />
+          <label for="OpcInfr">Sim</label>
+
+          <input type="radio" name="opcInfr" class="radio" value="Nao" />
+          <label for="OpcInfr">Não</label>
+
+          <input type="radio" name="opcInfr" class="radio" value="NA" />
+          <label for="OpcInfr">Não se Aplica</label>
+        </div>
+
+        <div class="grupo">
+          <h4>Há gestão adequada de resíduos?</h4>
+
+          <input type="radio" name="opcResi" class="radio" value="Sim" />
+          <label for="OpcResi">Sim</label>
+
+          <input type="radio" name="opcResi" class="radio" value="Nao" />
+          <label for="OpcResi">Não</label>
+
+          <input type="radio" name="opcResi" class="radio" value="NA" />
+          <label for="OpcResi">Não se Aplica</label>
+        </div>
+
+        <div class="grupo">
+          <h4>Está em Unidade de Conservação?</h4>
+          <input type="radio" name="opcCons" class="radio" value="Sim" />
+          <label for="OpcCons">Sim</label>
+
+          <input type="radio" name="opcCons" class="radio" value="Nao" />
+          <label for="OpcCons">Não</label>
+
+          <input type="radio" name="opcCons" class="radio" value="NA" />
+          <label for="OpcCons">Não se Aplica</label>
+        </div>
+
+        <div class="grupo">
+          <h4>Qual o resultado da análise?</h4>
+
+          <input type="radio" name="opcAna" class="radio" value="Sim" />
+          <label for="OpcAna">Favorável</label>
+          <input type="radio" name="opcAna" class="radio" value="Nao" />
+          <label for="OpcAna">Desfavorável</label>
+        </div>
+        <div class="grupo">
+          <label for="observacao">Observação</label>
+          <textarea
+            id="obs"
+            name="observacao"
+            maxlength="500"
+            placeholder="Digite sua Observação"
+          ></textarea>
+          <p class="contador">0 / 500</p>
+        </div>
+        <div class="grupo">
+          <label for="cond">Condicionante</label>
+          <textarea
+            id="cond"
+            name="condicionante"
+            maxlength="500"
+            placeholder="Digite seu Condicionante"
+          ></textarea>
+          <p class="contador">0 / 500</p>
+        </div>
+
+        <div class="grupo">
+          <button type="submit" id="btnCadastrar" name="btnCadastrar">
+            Cadastrar
+          </button>
+          <button type="reset" id="btnLimpar">Limpar</button>
+        </div>
+      </form>
+    </div>
+    <script src="../../static/pareceres/js/municipios.js"></script>
+    <script src="../../static/pareceres/js/form.js"></script>
+  </body>
+</html>

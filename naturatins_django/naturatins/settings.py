@@ -38,12 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-=======
-    'parecer',
-    'static',
-    'templates'
->>>>>>> parent of e3e3cf7 (commit)
 ]
 
 MIDDLEWARE = [
