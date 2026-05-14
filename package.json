@@ -22,5 +22,33 @@
       "target": "nsis",
       "icon": "Imagens/Logo-naturatins.ico"
     }
-  }
+  },
+    "files": [
+      "main.js",
+      "package.json",
+      "src/**/*",
+      "assets/**/*"
+    ],
+
+    "asar": true,
+
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./Imagens/Logo-naturatins.ico",
+      "uninstallerIcon": "./Imagens/Logo-naturatins.ico",
+      "installerHeaderIcon": "./Imagens/Logo-naturatins.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
 }

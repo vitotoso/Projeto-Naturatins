@@ -9,7 +9,7 @@
 
   <body>
     <div class="conteudo">
-      <form action="documento.html" method="get" autocomplete="off">
+      <form action="documento.html" method="get" autocomplete="new-password">
         <!--TROCAR O GET NÂO E SEGURO PARA FORMULARIOS REAIS O GET QUE ESTÀ ATUAL E PARA FINALIDADES DE TESTE -->
         <div class="logo-area">
           <div class="logo-box">
@@ -24,7 +24,7 @@
               id="codProc"
               name="inp_cod_processo"
               placeholder="Insira o codigo do processo aqui"
-              autocomplete="off"
+              autocomplete="new-password"
             />
           </div>
           <div class="grupo">
@@ -34,7 +34,7 @@
               id="codCar"
               name="inp_car"
               placeholder="Insira o numero do CAR"
-              autocomplete="off"
+              autocomplete="new-password"
             />
           </div>
 
@@ -45,7 +45,7 @@
               id="requerimento"
               name="inp_req"
               placeholder="Insira o requerimento aqui"
-              autocomplete="off"
+              autocomplete="new-password"
             />
           </div>
           <div class="grupo">
@@ -54,7 +54,7 @@
               type="text"
               id="ato"
               name="inp_ato"
-              autocomplete="off"
+              autocomplete="new-password"
               autocapitalize="on"
               placeholder="Digite o Ato administrativo aqui"
             />
@@ -67,7 +67,7 @@
               id="nomeReq"
               name="inp_nome_req"
               placeholder="Insira o nome do Requerente aqui"
-              autocomplete="off"
+              autocomplete="new-password"
               autocapitalize="on"
             />
           </div>
@@ -78,7 +78,7 @@
               id="nomeProp"
               name="nm_propriedade"
               placeholder="Insira o nome do Requerente aqui"
-              autocomplete="off"
+              autocomplete="new-password"
               autocapitalize="on"
             />
           </div>
@@ -99,9 +99,31 @@
               type="text"
               id="endereco"
               name="inp_end"
-              autocomplete="off"
+              autocomplete="new-password"
               autocapitalize="on"
-              placeholder="Digite o Endereçoda Propriedade aqui"
+              placeholder="Digite o Endereço da Propriedade aqui"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_end">Latitude:</label>
+            <input
+              type="text"
+              id="lat"
+              name="inp_lat"
+              autocomplete="new-password"
+              autocapitalize="on"
+              placeholder="Digite a Latitude"
+            />
+          </div>
+          <div class="grupo">
+            <label for="inp_end">Longitude:</label>
+            <input
+              type="text"
+              id="long"
+              name="inp_long"
+              autocomplete="new-password"
+              autocapitalize="on"
+              placeholder="Digite a Longitude"
             />
           </div>
           <div class="grupo">
@@ -112,7 +134,7 @@
               name="inp_data"
               placeholder="dd/mm/aaaa"
               maxlength="10"
-              autocomplete="off"
+              autocomplete="new-password"
             />
           </div>
           <div class="grupo">
@@ -131,7 +153,7 @@
               min="1"
               step="0.01"
               name="inp_area_prop"
-              autocomplete="off"
+              autocomplete="new-password"
               autocapitalize="on"
               placeholder="Digite a Área da Propriedade aqui"
             />
@@ -144,22 +166,24 @@
               min="1"
               step="0.01"
               name="inp_area_atvd"
-              autocomplete="off"
+              autocomplete="new-password"
               autocapitalize="on"
               placeholder="Digite a Área da Atividade aqui"
             />
           </div>
-          <!-- <div class="grupo"> select para estádo
-            <label for="select1">Estado:</label>
-            <select id="estado" name="select1"> 
-            </select>
-        </div>         -->
+
           <div class="grupo">
             <label for="cidade">Cidade</label>
-            <input type="text" id="municipio" list="lista-cidades" />
+            <input
+              type="text"
+              id="municipio"
+              list="lista-cidades"
+              autocomplete="new-password"
+            />
             <datalist id="lista-cidades"></datalist>
           </div>
         </div>
+
         <div class="grupo">
           <h4>Todos os documentos obrigatórios foram apresentados?</h4>
           <input type="radio" name="opcDoc" class="radio" value="Sim" />
@@ -299,7 +323,7 @@
           <label for="OpcAna">Desfavorável</label>
         </div>
         <div class="grupo">
-          <label for="obs">Observação</label>
+          <label for="observacao">Observação</label>
           <textarea
             id="obs"
             name="observacao"
