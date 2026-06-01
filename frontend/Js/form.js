@@ -156,8 +156,14 @@ function monitoramento(nome, just, alvo) {
   atualizar();
 }
 
-monitoramento("OpcDoc", "justificativaDocs", "Nao");
-monitoramento("exemplos", "justify", "outros");
+monitoramento("OpcCar", "carOpcs", "Nao");
+monitoramento("OpcArt", "artOpcs", "Nao");
+monitoramento("OpcAgua", "aguaOpcs", "Sim");
+monitoramento("Outorga", "aguaOpcs_1", "Outorga");
+monitoramento("DUI", "aguaOpcs_1", "DUI");
+monitoramento("OpcApoio", "apoioOpcs", "Sim"); 
+monitoramento("OpcSpr", "sprOpcs", "Sim"); 
+
 
 propriedade.addEventListener("input", function (event) {
   const atvElement = document.getElementById("areaAtvd");

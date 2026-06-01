@@ -147,23 +147,6 @@
           <input type="radio" name="OpcDoc" class="radio" value="NA" />
           <label for="OpcDoc">Não se Aplica</label>
         </div>
-        <div id="justificativaDocs" style="display: none" class="grupo">
-          <h4>Exemplos</h4>
-
-          <input type="radio" name="exemplos" class="radio" value="Ex1" />
-          <label for="exemplos">Exemplo 1</label>
-
-          <input type="radio" name="exemplos" class="radio" value="Ex2" />
-          <label for="exemplos">Exemplo 2</label>
-
-          <input type="radio" name="exemplos" class="radio" value="outros" />
-          <label for="exemplos">Outros</label>
-
-          <div id="justify" style="display: none">
-            <label>Justifique</label>
-            <textarea></textarea>
-          </div>
-        </div>
 
         <div class="grupo">
           <h4>O CAR está ativo e regular?</h4>
@@ -176,6 +159,14 @@
 
           <input type="radio" name="OpcCar" class="radio" value="NA" />
           <label for="OpcCar">Não se Aplica</label>
+
+          <div id="carOpcs" style="display: none">
+                <input type="radio" id="deficit" name="carOpcs" value="Deficit">
+                <label for="deficit">Deficit de Reserva Legal</label>
+
+                <input type="radio" id="conflito" name="carOpcs" value="Conflito">
+                <label for="conflito">Car em Conflito</label>
+            </div>
         </div>
 
         <div class="grupo">
@@ -189,6 +180,11 @@
 
           <input type="radio" name="OpcArt" class="radio" value="NA" />
           <label for="OpcArt">Não se Aplica</label>
+          
+            <div id="artOpcs" style="display: none">
+              <label>Justifique</label>
+            <textarea></textarea>
+          </div>
         </div>
 
         <div class="grupo">
@@ -202,7 +198,18 @@
 
           <input type="radio" name="OpcAgua" class="radio" value="NA" />
           <label for="OpcAgua">Não se Aplica</label>
-        </div>
+            <div id="aguaOpcs" style="display: none">
+              <input type="radio" name="aguaOpc" class="radio" value="DUI" />
+              <label for="aguaOpc">DUI</label>
+
+              <input type="radio" name="aguaOpc" class="radio" value="Outorga" />
+              <label for="aguaOpc">Outorga</label>
+
+            <div id="aguaOpcs_1" style="display: none">
+                  <label>Justifique</label>
+              <textarea></textarea>
+            </div>
+        </div> 
 
         <div class="grupo">
           <h4>Há uso de água para apoio?</h4>
@@ -215,6 +222,19 @@
 
           <input type="radio" name="OpcApoio" class="radio" value="NA" />
           <label for="OpcApoio">Não se Aplica</label>
+          
+          <div id="apoioOpcs" style="display: none">
+            <input type="radio" name="apoioOpc" class="radio" value="DUI" />
+            <label for="apoioOpc">DUI</label>
+
+            <input type="radio" name="apoioOpc" class="radio" value="Outorga" />
+            <label for="apoioOpc">Outorga</label>
+
+            <div id="apoioOpcs_1" style="display: none">
+                  <label>Justifique</label>
+              <textarea></textarea>
+            </div>
+          </div>
         </div>
 
         <div class="grupo">
@@ -228,6 +248,11 @@
 
           <input type="radio" name="OpcSpr" class="radio" value="NA" />
           <label for="OpcSpr">Não se Aplica</label>
+
+            <div id="sprOpcs" style="display: none">
+                <label>ARD:</label>
+              <textarea></textarea>
+            </div>
         </div>
 
         <div class="grupo">
