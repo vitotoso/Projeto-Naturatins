@@ -159,10 +159,12 @@ function monitoramento(nome, just, alvo) {
 monitoramento("OpcCar", "carOpcs", "Nao");
 monitoramento("OpcArt", "artOpcs", "Nao");
 monitoramento("OpcAgua", "aguaOpcs", "Sim");
-monitoramento("Outorga", "aguaOpcs_1", "Outorga");
-monitoramento("DUI", "aguaOpcs_1", "DUI");
-monitoramento("OpcApoio", "apoioOpcs", "Sim"); 
-monitoramento("OpcSpr", "sprOpcs", "Sim"); 
+monitoramento("aguaOpc", "aguaOpcs_1", "DUI");
+monitoramento("aguaOpc", "aguaOpcs_1", "Outorga");
+monitoramento("OpcApoio", "apoioOpcs", "Sim");
+monitoramento("apoioOpc", "apoioOpcs_1", "DUI");
+monitoramento("apoioOpc", "apoioOpcs_1", "Outorga");
+monitoramento("OpcSpr", "sprOpcs", "Sim");
 
 
 propriedade.addEventListener("input", function (event) {
