@@ -2,3 +2,10 @@ node_modules/
 dist/
 *.log
 .env
+
+# Python / Django
+__pycache__/
+*.pyc
+.venv/
+staticfiles/
+db.sqlite3

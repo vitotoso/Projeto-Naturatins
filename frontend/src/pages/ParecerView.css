@@ -1,0 +1,227 @@
+.parecer-wrapper {
+  --bg-canvas: #e7edea;
+  --page-white: #ffffff;
+  --text-color: #000000;
+  --header-gray: #d9d9d9;
+  background-color: var(--bg-canvas);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  min-height: 100vh;
+}
+
+.parecer-wrapper .page {
+  background: var(--page-white);
+  width: 210mm;
+  min-height: 297mm;
+  padding: 1.5cm 2.5cm 2.5cm 2.5cm;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  font-family: "Times New Roman", Times, serif;
+  color: var(--text-color);
+  line-height: 1.5;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.parecer-wrapper .cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.parecer-wrapper .logo-area {
+  display: flex;
+  align-items: center;
+  gap: 250px;
+  margin-bottom: 20px;
+}
+
+.parecer-wrapper .logo-box {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9pt;
+  font-weight: bold;
+  color: #2e7d32;
+  text-align: center;
+  padding: 4px;
+}
+
+.parecer-wrapper .logo-box img {
+  max-width: 100%;
+}
+
+.parecer-wrapper .cabecalho-texto {
+  font-size: 8pt;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.parecer-wrapper .titulo-doc {
+  text-align: center;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 18px 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.parecer-wrapper .cidade-data {
+  text-align: right;
+  font-size: 11pt;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.parecer-wrapper .secao-titulo {
+  background-color: var(--header-gray);
+  font-size: 11pt;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+}
+
+.parecer-wrapper section {
+  margin-bottom: 16px;
+}
+
+.parecer-wrapper .dado-row {
+  display: flex;
+  font-size: 11pt;
+  margin-bottom: 2px;
+}
+
+.parecer-wrapper .dado-label {
+  font-weight: bold;
+  min-width: 170px;
+}
+
+.parecer-wrapper .dado-valor {
+  flex-grow: 1;
+  border-bottom: 1px dotted #aaa;
+}
+
+.parecer-wrapper .texto-corpo {
+  font-size: 11pt;
+  text-align: justify;
+  text-indent: 1.5cm;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.parecer-wrapper .lista {
+  margin-left: 1.5cm;
+  margin-bottom: 10px;
+  font-size: 11pt;
+}
+
+.parecer-wrapper .lista li {
+  margin-bottom: 6px;
+  text-align: justify;
+}
+
+.parecer-wrapper .pendencias-titulo {
+  font-size: 11pt;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.parecer-wrapper .lista-pendencias {
+  margin-left: 1cm;
+  font-size: 11pt;
+}
+
+.parecer-wrapper .lista-pendencias li {
+  margin-bottom: 8px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.parecer-wrapper .assinatura {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.parecer-wrapper .linha-assinatura {
+  border-top: 1px solid #000;
+  width: 280px;
+  margin: 0 auto 4px auto;
+}
+
+.parecer-wrapper .assinatura-nome {
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.parecer-wrapper .assinatura-cargo {
+  font-size: 11pt;
+}
+
+.acoes-parecer {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.acoes-parecer button {
+  background-color: var(--verde);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.acoes-parecer .botao-voltar {
+  background-color: var(--texto-secundario, #52514e);
+}
+
+.acoes-parecer button:hover {
+  background-color: var(--verde-escuro);
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    margin: 0;
+  }
+  .parecer-wrapper {
+    background: none;
+    padding: 0;
+    min-height: 0;
+  }
+  .parecer-wrapper .page {
+    box-shadow: none;
+    min-height: 0;
+  }
+  .acoes-parecer {
+    display: none;
+  }
+  .parecer-wrapper section,
+  .parecer-wrapper .dado-row,
+  .parecer-wrapper .lista li,
+  .parecer-wrapper .lista-pendencias li,
+  .parecer-wrapper .assinatura {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .parecer-wrapper .cabecalho {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+}

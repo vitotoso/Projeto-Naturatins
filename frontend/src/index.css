@@ -1,0 +1,367 @@
+:root {
+  --verde-escuro: #1b5e20;
+  --verde: #2e7d32;
+  --verde-texto: #427c46;
+  --verde-suave: #c8e6c9;
+  --azul-escuro: #0d3b66;
+  --azul: #1565c0;
+  --azul-suave: #bbdefb;
+  --superficie: #ffffff;
+  --fundo: #f2f6f3;
+  --texto: #1c231d;
+  --texto-secundario: #52514e;
+  --borda: #d8e3da;
+  --erro: #c62828;
+
+  font: 16px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 20px;
+  color: var(--verde-escuro);
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0 0 12px;
+  color: var(--azul-escuro);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  background: var(--verde);
+  color: white;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: var(--verde-escuro);
+}
+
+button:disabled {
+  background: var(--borda);
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  font: inherit;
+  background: var(--superficie);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+  color: var(--texto-secundario);
+}
+
+.grupo {
+  margin-bottom: 16px;
+}
+
+.mensagem-erro {
+  color: var(--erro);
+  font-size: 14px;
+}
+
+/* --- Login --- */
+.tela-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--verde-escuro), var(--azul-escuro));
+}
+
+.cartao-login {
+  background: var(--superficie);
+  padding: 40px;
+  border-radius: 12px;
+  width: 340px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.logo-login {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* --- Layout --- */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  background: linear-gradient(135deg, var(--verde-escuro), var(--azul-escuro));
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 24px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.marca img {
+  height: 36px;
+}
+
+.topo nav {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.topo nav a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.topo nav a:hover,
+.topo nav a.active {
+  color: white;
+  border-bottom-color: var(--verde-suave);
+}
+
+.usuario-logado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.usuario-logado button {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.usuario-logado button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.conteudo-app {
+  flex: 1;
+  padding: 24px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* --- Tabela --- */
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--superficie);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tabela th,
+.tabela td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--borda);
+  font-size: 14px;
+}
+
+.tabela th {
+  background: var(--verde-suave);
+  color: var(--verde-escuro);
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.acoes a {
+  color: var(--azul);
+  font-size: 13px;
+  align-self: center;
+}
+
+.acoes button {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+.badge-rascunho {
+  background: var(--texto-secundario);
+}
+
+.badge-em_tramite {
+  background: #fab219;
+  color: #3a2900;
+}
+
+.badge-aprovado {
+  background: #0ca30c;
+}
+
+.badge-reprovado {
+  background: var(--erro);
+}
+
+/* --- Modal --- */
+.modal-fundo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: var(--superficie);
+  padding: 24px;
+  border-radius: 10px;
+  width: 380px;
+}
+
+.modal-acoes {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.modal-acoes button:last-child {
+  background: var(--texto-secundario);
+}
+
+/* --- Formulário de processo --- */
+.form-processo {
+  background: var(--superficie);
+  padding: 24px;
+  border-radius: 10px;
+  max-width: 720px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.opcao-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  margin-right: 16px;
+}
+
+.opcao-radio input {
+  width: auto;
+  accent-color: var(--verde);
+}
+
+.subcampo {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--verde-suave);
+  background: var(--fundo);
+  border-radius: 0 6px 6px 0;
+}
+
+.subcampo label:not(.opcao-radio) {
+  margin-top: 6px;
+}
+
+.acoes-form {
+  display: flex;
+  gap: 8px;
+}
+
+.acoes-form button:last-child {
+  background: var(--texto-secundario);
+}
+
+/* --- Dashboard --- */
+.grade-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-tile {
+  background: var(--superficie);
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--texto-secundario);
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--verde-escuro);
+}
+
+.grade-graficos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 16px;
+}
+
+.cartao-grafico {
+  background: var(--superficie);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
